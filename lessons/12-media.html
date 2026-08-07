@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lesson 12: Learn about HTML audio and video elements with controls, source elements and fallbacks.">
+  <title>Lesson 12: Audio &amp; Video | HTML Learning Hub</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container">
+      <a href="../index.html" class="brand">
+        <span class="logo">&lt;/&gt;</span>
+        HTML Learning Hub
+      </a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#lessons">Lessons</a>
+      </nav>
+        <div id="auth-area"></div>
+      </div>
+  </header>
+
+  <section class="lesson-header" data-lesson="12">
+    <div class="container">
+      <div class="lesson-breadcrumb"><a href="../index.html">Home</a> / Lesson 12</div>
+      <h1>Audio &amp; Video</h1>
+      <p class="lesson-subtitle">
+        Native media is built into HTML: <code class="inline">audio</code> and
+        <code class="inline">video</code> elements play files without any plugins, controlled by the
+        <code class="inline">controls</code> attribute.
+      </p>
+      <div class="meta-row">
+        <span class="meta-chip">Lesson 12</span>
+        <span class="meta-chip">Intermediate</span>
+        <button type="button" id="toggle-complete" class="btn btn-complete">Mark as Complete</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="lesson-body">
+    <div class="container">
+
+      <div class="card-block">
+        <h2>💡 The Concept</h2>
+        <ul>
+          <li>
+            <code class="inline">controls</code> — shows play/pause, volume and scrub bar. Without it
+            the media is silent and invisible.
+          </li>
+          <li>
+            <code class="inline">autoplay</code> — starts automatically (often blocked by browsers;
+            use <code class="inline">muted</code> too for reliability).
+          </li>
+          <li>
+            <code class="inline">loop</code> — restarts when finished;
+            <code class="inline">poster</code> — a cover image shown before video plays.
+          </li>
+          <li>
+            <code class="inline">source</code> — list several formats; the browser plays the first it
+            supports. Text inside the tag is a last-resort fallback.
+          </li>
+        </ul>
+        <div class="tip-box">
+          <strong>💡 Best practice:</strong> Always include captions or a transcript, and never use
+          autoplay for audio — it's jarring and often blocked.
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>🖥️ Live Demo</h2>
+        <p>Native audio and video players — click play (they use public sample files):</p>
+        <div class="demo-box">
+          <div class="demo-label">▸ Live Example — Audio &amp; Video</div>
+          <p style="font-weight:700; font-size:0.9rem;">Audio player (horse.mp3, public sample):</p>
+          <audio controls preload="none" style="width:100%; margin-bottom:14px;">
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <p style="font-weight:700; font-size:0.9rem;">Video player (mov_bbb.mp4, public sample):</p>
+          <video controls width="400" poster="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='225'%3E%3Crect width='400' height='225' fill='%230f172a'/%3E%3Ctext x='200' y='120' font-family='Arial' font-size='18' fill='white' text-anchor='middle'%3EHTML5 Video Poster%3C/text%3E%3C/svg%3E">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video element.
+          </video>
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>📝 Source Code</h2>
+        <div class="code-block">
+          <span class="code-caption">audio and video with multiple sources and fallbacks</span>
+          <pre>&lt;audio controls&gt;
+  &lt;source src="song.mp3" type="audio/mpeg"&gt;
+  &lt;source src="song.ogg" type="audio/ogg"&gt;
+  Your browser does not support audio.
+&lt;/audio&gt;
+
+&lt;video controls width="400" poster="cover.jpg"&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+  &lt;source src="movie.webm" type="video/webm"&gt;
+  Your browser does not support video.
+&lt;/video&gt;</pre>
+        </div>
+      </div>
+
+
+      <div class="card-block">
+        <h2>✅ Key Takeaways</h2>
+        <div class="keypoints">
+          <h3>Remember</h3>
+          <ul>
+            <li><code class="inline">controls</code> is required for users to control media.</li>
+            <li>Provide multiple <code class="inline">source</code> formats for browser compatibility.</li>
+            <li>Always include fallback text and a <code class="inline">poster</code> for videos.</li>
+            <li>Avoid autoplaying audio; mute autoplaying video or don't autoplay at all.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pager">
+        <a href="11-div-span.html">
+          <span class="pager-label">← Previous</span>
+          <span class="pager-title">div vs span</span>
+        </a>
+        <a href="13-iframe.html" class="next">
+          <span class="pager-label">Next Lesson →</span>
+          <span class="pager-title">iframes &amp; Embedding</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&lt;/&gt; HTML Learning Hub — Lesson 12 of 20 · <span class="lesson-status" id="lesson-status">Not completed yet</span></span>
+      <span><a href="../index.html">Back to home</a></span>
+    </div>
+  </footer>
+
+
+  <script src="../js/app.js" defer></script>
+</body>
+</html>
+

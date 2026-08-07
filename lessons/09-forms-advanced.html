@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lesson 9: Learn advanced HTML form controls - select, radio, checkbox, fieldset, legend and validation.">
+  <title>Lesson 09: Forms — Advanced Controls | HTML Learning Hub</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container">
+      <a href="../index.html" class="brand">
+        <span class="logo">&lt;/&gt;</span>
+        HTML Learning Hub
+      </a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#lessons">Lessons</a>
+      </nav>
+        <div id="auth-area"></div>
+      </div>
+  </header>
+
+  <section class="lesson-header" data-lesson="9">
+    <div class="container">
+      <div class="lesson-breadcrumb"><a href="../index.html">Home</a> / Lesson 09</div>
+      <h1>Forms — Advanced Controls</h1>
+      <p class="lesson-subtitle">
+        Dropdowns, radio buttons, checkboxes, grouped fieldsets, range sliders, colour pickers and
+        native HTML5 validation.
+      </p>
+      <div class="meta-row">
+        <span class="meta-chip">Lesson 09</span>
+        <span class="meta-chip">Intermediate</span>
+        <button type="button" id="toggle-complete" class="btn btn-complete">Mark as Complete</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="lesson-body">
+    <div class="container">
+
+      <div class="card-block">
+        <h2>💡 The Concept</h2>
+        <ul>
+          <li>
+            <code class="inline">select</code> / <code class="inline">option</code> — dropdown menus;
+            <code class="inline">optgroup</code> groups options under a heading label.
+          </li>
+          <li>
+            <code class="inline">input type="radio"</code> — pick exactly one option from a group
+            (shared <code class="inline">name</code>). <code class="inline">checked</code> preselects one.
+          </li>
+          <li>
+            <code class="inline">input type="checkbox"</code> — pick any number of options.
+          </li>
+          <li>
+            <code class="inline">fieldset</code> / <code class="inline">legend</code> — visually and
+            semantically group related controls; the legend is the group's title.
+          </li>
+          <li>
+            <code class="inline">range</code>, <code class="inline">color</code>, and
+            <code class="inline">datalist</code> (free-text with suggestions) add richness.
+          </li>
+          <li>
+            HTML5 validation: <code class="inline">pattern</code>, <code class="inline">min</code>,
+            <code class="inline">max</code>, and <code class="inline">required</code> make the browser
+            validate before submitting.
+          </li>
+        </ul>
+      </div>
+
+      <div class="card-block">
+        <h2>🖥️ Live Demo</h2>
+        <p>An order form showing dropdowns, radio buttons, checkboxes, sliders and a colour picker:</p>
+        <div class="demo-box">
+          <div class="demo-label">▸ Live Example — Advanced Form</div>
+          <form action="#" method="get" style="max-width: 480px;">
+            <fieldset style="border:1px solid var(--border); border-radius:8px; padding:14px 16px; margin-bottom:12px;">
+              <legend><strong>Size (radio — pick one)</strong></legend>
+              <label><input type="radio" name="size" value="small"> Small</label>
+              <label style="margin-left:14px;"><input type="radio" name="size" value="medium" checked> Medium</label>
+              <label style="margin-left:14px;"><input type="radio" name="size" value="large"> Large</label>
+            </fieldset>
+
+            <p style="margin-bottom:10px;">
+              <label for="topping"><strong>Toppings (multi-select):</strong></label><br>
+              <select id="topping" name="topping" multiple size="3" style="width:100%; padding:8px; border:1px solid var(--border); border-radius:6px;">
+                <optgroup label="Classic">
+                  <option>Cheese</option>
+                  <option>Pepperoni</option>
+                </optgroup>
+                <optgroup label="Veggie">
+                  <option>Mushroom</option>
+                  <option>Olive</option>
+                </optgroup>
+              </select>
+            </p>
+
+            <p style="margin-bottom:10px;">
+              <label><input type="checkbox" name="extras" value="extra-cheese" checked> Extra cheese (+$2)</label>
+            </p>
+
+            <p style="margin-bottom:10px;">
+              <label for="heat"><strong>Spice level: </strong></label>
+              <input type="range" id="heat" name="heat" min="0" max="5" value="2" style="vertical-align:middle;">
+            </p>
+
+            <p style="margin-bottom:10px;">
+              <label for="crust"><strong>Crust colour (color input):</strong></label>
+              <input type="color" id="crust" name="crust" value="#d97706">
+            </p>
+
+            <button type="submit" style="background:var(--primary); color:#fff; border:none; padding:10px 18px; border-radius:6px; cursor:pointer;">Place Order</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>📝 Source Code</h2>
+        <div class="code-block">
+          <span class="code-caption">Advanced controls in a grouped fieldset</span>
+          <pre>&lt;fieldset&gt;
+  &lt;legend&gt;Size&lt;/legend&gt;
+  &lt;input type="radio" name="size" value="small"&gt; Small
+  &lt;input type="radio" name="size" value="large"&gt; Large
+&lt;/fieldset&gt;
+
+&lt;select name="topping" multiple&gt;
+  &lt;optgroup label="Classic"&gt;
+    &lt;option&gt;Cheese&lt;/option&gt;
+    &lt;option&gt;Pepperoni&lt;/option&gt;
+  &lt;/optgroup&gt;
+&lt;/select&gt;
+
+&lt;input type="range" min="0" max="5" value="2"&gt;
+&lt;input type="color" value="#d97706"&gt;</pre>
+        </div>
+      </div>
+
+
+      <div class="card-block">
+        <h2>✅ Key Takeaways</h2>
+        <div class="keypoints">
+          <h3>Remember</h3>
+          <ul>
+            <li>Radio buttons share a <code class="inline">name</code>; only one can be selected.</li>
+            <li>Checkboxes let users select any number of options.</li>
+            <li><code class="inline">fieldset</code> + <code class="inline">legend</code> group controls for everyone.</li>
+            <li>Native validation (<code class="inline">required</code>, <code class="inline">pattern</code>, <code class="inline">min</code>/<code class="inline">max</code>) runs before any JavaScript.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pager">
+        <a href="08-forms-basic.html">
+          <span class="pager-label">← Previous</span>
+          <span class="pager-title">Forms — Basic Elements</span>
+        </a>
+        <a href="10-semantic-html.html" class="next">
+          <span class="pager-label">Next Lesson →</span>
+          <span class="pager-title">Semantic HTML</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&lt;/&gt; HTML Learning Hub — Lesson 09 of 20 · <span class="lesson-status" id="lesson-status">Not completed yet</span></span>
+      <span><a href="../index.html">Back to home</a></span>
+    </div>
+  </footer>
+
+
+  <script src="../js/app.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lesson 2: Learn about HTML heading elements h1 to h6 and how to structure page hierarchy.">
+  <title>Lesson 02: Headings &amp; Hierarchy | HTML Learning Hub</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container">
+      <a href="../index.html" class="brand">
+        <span class="logo">&lt;/&gt;</span>
+        HTML Learning Hub
+      </a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#lessons">Lessons</a>
+      </nav>
+        <div id="auth-area"></div>
+      </div>
+  </header>
+
+  <section class="lesson-header" data-lesson="2">
+    <div class="container">
+      <div class="lesson-breadcrumb"><a href="../index.html">Home</a> / Lesson 02</div>
+      <h1>Headings &amp; Hierarchy</h1>
+      <p class="lesson-subtitle">
+        HTML provides six heading levels, <code class="inline">h1</code> through
+        <code class="inline">h6</code>, used to structure content from most to least important.
+      </p>
+      <div class="meta-row">
+        <span class="meta-chip">Lesson 02</span>
+        <span class="meta-chip">Beginner</span>
+        <button type="button" id="toggle-complete" class="btn btn-complete">Mark as Complete</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="lesson-body">
+    <div class="container">
+
+      <div class="card-block">
+        <h2>💡 The Concept</h2>
+        <p>
+
+      <div class="card-block">
+        <h2>🖥️ Live Demo</h2>
+        <p>All six heading levels, rendered by the browser with their default sizes:</p>
+        <div class="demo-box">
+          <div class="demo-label">▸ Live Example — h1 to h6</div>
+          <h1 style="font-size: 1.8rem; margin-bottom: 4px;">Heading 1 — Page title</h1>
+          <h2 style="font-size: 1.5rem; margin-bottom: 4px;">Heading 2 — Major section</h2>
+          <h3 style="font-size: 1.25rem; margin-bottom: 4px;">Heading 3 — Sub-section</h3>
+          <h4 style="font-size: 1.05rem; margin-bottom: 4px;">Heading 4 — Sub-sub-section</h4>
+          <h5 style="font-size: 0.95rem; margin-bottom: 4px;">Heading 5 — Minor heading</h5>
+          <h6 style="font-size: 0.85rem; margin-bottom: 4px;">Heading 6 — Smallest heading</h6>
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>📝 Source Code</h2>
+        <div class="code-block">
+          <span class="code-caption">A correct heading hierarchy</span>
+          <pre>&lt;h1&gt;My Recipe Website&lt;/h1&gt;
+  &lt;h2&gt;Desserts&lt;/h2&gt;
+    &lt;h3&gt;Chocolate Cake&lt;/h3&gt;
+      &lt;p&gt;Ingredients and instructions...&lt;/p&gt;
+    &lt;h3&gt;Apple Pie&lt;/h3&gt;
+  &lt;h2&gt;Main Courses&lt;/h2&gt;</pre>
+        </div>
+        <div class="tip-box">
+          <strong>💡 Tip:</strong> Headings give structure. If you only need bigger text, style it with
+          CSS — don't reach for a heading tag out of hierarchy.
+        </div>
+      </div>
+
+          Headings create the outline of your page — the same way chapters and sections structure a
+          book. Search engines and screen readers use them to understand what your content is about.
+        </p>
+        <ul>
+          <li>
+            <code class="inline">h1</code> — the main title. Use it <strong>once per page</strong>.
+          </li>
+          <li>
+            <code class="inline">h2</code> — major sections under the h1.
+          </li>
+          <li>
+            <code class="inline">h3</code> — sub-sections under an h2, and so on down to
+            <code class="inline">h6</code>.
+          </li>
+        </ul>
+        <div class="tip-box">
+          <strong>💡 Tip:</strong> Never skip levels (e.g. jumping from h1 straight to h3) and never
+          pick a heading just for its size. Use CSS for visual sizing instead — headings carry meaning.
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>✅ Key Takeaways</h2>
+        <div class="keypoints">
+          <h3>Remember</h3>
+          <ul>
+            <li>Six heading levels exist: <code class="inline">h1</code> to <code class="inline">h6</code>.</li>
+            <li>Use one <code class="inline">h1</code> per page for the main title.</li>
+            <li>Keep a logical hierarchy and don't skip levels.</li>
+            <li>Screen readers and SEO rely on headings for structure.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pager">
+        <a href="01-basic-structure.html">
+          <span class="pager-label">← Previous</span>
+          <span class="pager-title">HTML Document Structure</span>
+        </a>
+        <a href="03-paragraphs-text.html" class="next">
+          <span class="pager-label">Next Lesson →</span>
+          <span class="pager-title">Paragraphs &amp; Text Formatting</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&lt;/&gt; HTML Learning Hub — Lesson 02 of 20 · <span class="lesson-status" id="lesson-status">Not completed yet</span></span>
+      <span><a href="../index.html">Back to home</a></span>
+    </div>
+  </footer>
+
+
+  <script src="../js/app.js" defer></script>
+</body>
+</html>
+

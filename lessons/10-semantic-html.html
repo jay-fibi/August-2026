@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lesson 10: Learn about semantic HTML elements - header, nav, main, article, section, aside and footer.">
+  <title>Lesson 10: Semantic HTML | HTML Learning Hub</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container">
+      <a href="../index.html" class="brand">
+        <span class="logo">&lt;/&gt;</span>
+        HTML Learning Hub
+      </a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#lessons">Lessons</a>
+      </nav>
+        <div id="auth-area"></div>
+      </div>
+  </header>
+
+  <section class="lesson-header" data-lesson="10">
+    <div class="container">
+      <div class="lesson-breadcrumb"><a href="../index.html">Home</a> / Lesson 10</div>
+      <h1>Semantic HTML</h1>
+      <p class="lesson-subtitle">
+        Semantic elements describe what content <em>means</em>, not just how it looks. Screen readers,
+        search engines and other developers all benefit.
+      </p>
+      <div class="meta-row">
+        <span class="meta-chip">Lesson 10</span>
+        <span class="meta-chip">Intermediate</span>
+        <button type="button" id="toggle-complete" class="btn btn-complete">Mark as Complete</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="lesson-body">
+    <div class="container">
+
+      <div class="card-block">
+        <h2>💡 The Concept</h2>
+        <ul>
+          <li>
+            <code class="inline">header</code> — introductory content: logo, page title, search box.
+          </li>
+          <li>
+            <code class="inline">nav</code> — a block of navigation links.
+          </li>
+          <li>
+            <code class="inline">main</code> — the page's unique core content (use once).
+          </li>
+          <li>
+            <code class="inline">section</code> — a themed group of content, usually with a heading.
+          </li>
+          <li>
+            <code class="inline">article</code> — a self-contained unit: blog post, product card, comment.
+          </li>
+          <li>
+            <code class="inline">aside</code> — tangentially related content: sidebars, related links.
+          </li>
+          <li>
+            <code class="inline">footer</code> — closing info: copyright, sitemap, contact.
+          </li>
+          <li>
+            Bonus: <code class="inline">time</code> and <code class="inline">figure</code> add even
+            more meaning to specific content.
+          </li>
+        </ul>
+        <div class="tip-box">
+          <strong>💡 Why it matters:</strong> Replacing 20 nested <code class="inline">div</code>s
+          with semantic tags improves accessibility and SEO for free.
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>🖥️ Live Demo</h2>
+        <p>A complete mini news page built entirely from semantic elements — notice the structure in
+        the code below it:</p>
+        <div class="demo-box">
+          <div class="demo-label">▸ Live Example — Semantic Page</div>
+          <div style="border:1px solid var(--border); border-radius:8px; overflow:hidden; text-align:left;">
+            <header style="background:var(--primary-light); padding:12px 16px; font-weight:800; color:var(--primary-dark);">Site Header</header>
+            <nav style="background:#f8fafc; padding:8px 16px; border-bottom:1px solid var(--border); font-size:0.9rem;">
+              <a href="#" style="margin-right:14px;">Home</a>
+              <a href="#" style="margin-right:14px;">News</a>
+              <a href="#">Contact</a>
+            </nav>
+            <main style="padding:16px;">
+              <article>
+                <h3 style="font-size:1.05rem;">Article — Semantic tags win awards</h3>
+                <p style="font-size:0.9rem;">Published <time datetime="2026-08-07">7 Aug 2026</time> by the hub team.</p>
+                <p style="font-size:0.9rem;">This article lives in an <code class="inline">&lt;article&gt;</code> inside the page's <code class="inline">&lt;main&gt;</code>.</p>
+              </article>
+              <aside style="background:#fffbeb; padding:10px 14px; border-radius:8px; margin-top:10px; font-size:0.85rem;">
+                📌 Aside — related links and context sit beside the main content.
+              </aside>
+            </main>
+            <footer style="background:#f1f5f9; padding:10px 16px; font-size:0.8rem; color:var(--text-muted);">Site Footer — © 2026</footer>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>📝 Source Code</h2>
+        <div class="code-block">
+          <span class="code-caption">Semantic skeleton</span>
+          <pre>&lt;body&gt;
+  &lt;header&gt; Logo and title &lt;/header&gt;
+  &lt;nav&gt; Home · News · Contact &lt;/nav&gt;
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h1&gt;Article title&lt;/h1&gt;
+      &lt;p&gt;Published &lt;time datetime="2026-08-07"&gt;7 Aug&lt;/time&gt;&lt;/p&gt;
+      &lt;p&gt;Article body...&lt;/p&gt;
+    &lt;/article&gt;
+    &lt;aside&gt; Related links &lt;/aside&gt;
+  &lt;/main&gt;
+  &lt;footer&gt; Copyright notice &lt;/footer&gt;
+&lt;/body&gt;</pre>
+        </div>
+      </div>
+
+
+      <div class="card-block">
+        <h2>✅ Key Takeaways</h2>
+        <div class="keypoints">
+          <h3>Remember</h3>
+          <ul>
+            <li>Semantic tags describe meaning: header, nav, main, section, article, aside, footer.</li>
+            <li>Use one <code class="inline">main</code> per page for the primary content.</li>
+            <li>Semantic HTML improves accessibility and SEO without any extra code.</li>
+            <li>Reach for these elements before defaulting to <code class="inline">div</code>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pager">
+        <a href="09-forms-advanced.html">
+          <span class="pager-label">← Previous</span>
+          <span class="pager-title">Forms — Advanced Controls</span>
+        </a>
+        <a href="11-div-span.html" class="next">
+          <span class="pager-label">Next Lesson →</span>
+          <span class="pager-title">div vs span</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&lt;/&gt; HTML Learning Hub — Lesson 10 of 20 · <span class="lesson-status" id="lesson-status">Not completed yet</span></span>
+      <span><a href="../index.html">Back to home</a></span>
+    </div>
+  </footer>
+
+
+  <script src="../js/app.js" defer></script>
+</body>
+</html>
+

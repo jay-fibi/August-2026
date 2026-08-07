@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lesson 17: Learn about HTML global attributes - id, class, style, title and custom data-* attributes.">
+  <title>Lesson 17: Global &amp; Data Attributes | HTML Learning Hub</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container">
+      <a href="../index.html" class="brand">
+        <span class="logo">&lt;/&gt;</span>
+        HTML Learning Hub
+      </a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#lessons">Lessons</a>
+      </nav>
+        <div id="auth-area"></div>
+      </div>
+  </header>
+
+  <section class="lesson-header" data-lesson="17">
+    <div class="container">
+      <div class="lesson-breadcrumb"><a href="../index.html">Home</a> / Lesson 17</div>
+      <h1>Global &amp; Data Attributes</h1>
+      <p class="lesson-subtitle">
+        Global attributes work on <em>every</em> element — <code class="inline">id</code>,
+        <code class="inline">class</code>, <code class="inline">style</code>,
+        <code class="inline">title</code>, <code class="inline">hidden</code> — plus custom
+        <code class="inline">data-*</code> attributes for your own data.
+      </p>
+      <div class="meta-row">
+        <span class="meta-chip">Lesson 17</span>
+        <span class="meta-chip">Intermediate</span>
+        <button type="button" id="toggle-complete" class="btn btn-complete">Mark as Complete</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="lesson-body">
+    <div class="container">
+
+      <div class="card-block">
+        <h2>💡 The Concept</h2>
+        <ul>
+          <li>
+            <code class="inline">id</code> — a unique identifier, one per page. Used for anchor links,
+            form labels and JavaScript hooks.
+          </li>
+          <li>
+            <code class="inline">class</code> — a reusable label for styling many elements at once.
+          </li>
+          <li>
+            <code class="inline">style</code> — inline CSS. Useful for quick tweaks; prefer stylesheets
+            for real projects.
+          </li>
+          <li>
+            <code class="inline">title</code> — a tooltip shown on hover.
+          </li>
+          <li>
+            <code class="inline">hidden</code> — removes an element from display.
+          </li>
+          <li>
+            <code class="inline">data-*</code> — any attribute starting with <code class="inline">data-</code>
+            (e.g. <code class="inline">data-product-id</code>) carries custom information readable by
+            CSS and JavaScript.
+          </li>
+          <li>
+            <code class="inline">lang</code>, <code class="inline">dir</code>, <code class="inline">tabindex</code>
+            and <code class="inline">contenteditable</code> round out the globals.
+          </li>
+        </ul>
+      </div>
+
+      <div class="card-block">
+        <h2>🖥️ Live Demo</h2>
+        <p>Attributes in action — hover the box to see the title tooltip, and check the data attributes:</p>
+        <div class="demo-box">
+          <div class="demo-label">▸ Live Example — Attributes</div>
+          <div id="featured-product" class="product-box"
+               data-product-id="p-1042" data-category="electronics" data-in-stock="true"
+               title="Hover tooltip from the title attribute"
+               style="border:1px solid var(--border); background:#fff; border-radius:8px; padding:14px 16px; max-width:360px;">
+            <h3 style="font-size:1rem;">Wireless Headphones</h3>
+            <p style="font-size:0.9rem; margin:4px 0;">Stored as data attributes:</p>
+            <code class="inline">data-product-id="p-1042"</code><br>
+            <code class="inline">data-category="electronics"</code><br>
+            <code class="inline">data-in-stock="true"</code>
+          </div>
+          <p class="demo-note">JavaScript can read these via <code class="inline">element.dataset</code> — try it in the console.</p>
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>📝 Source Code</h2>
+        <div class="code-block">
+          <span class="code-caption">Global + data attributes</span>
+          <pre>&lt;div id="featured-product"          &lt;!-- unique id --&gt;
+     class="product-box"            &lt;!-- reusable class --&gt;
+     data-product-id="p-1042"       &lt;!-- custom data --&gt;
+     data-in-stock="true"
+     title="Hover tooltip"&gt;
+  ...
+&lt;/div&gt;
+
+&lt;p hidden&gt;This paragraph is hidden.&lt;/p&gt;
+&lt;p tabindex="0"&gt;Focusable with Tab key.&lt;/p&gt;
+&lt;p contenteditable="true"&gt;You can edit me!&lt;/p&gt;</pre>
+        </div>
+        <div class="tip-box">
+          <strong>💡 Tip:</strong> Keep <code class="inline">id</code> values unique across the page —
+          duplicates break anchors, labels and JavaScript selectors.
+        </div>
+      </div>
+
+
+      <div class="card-block">
+        <h2>✅ Key Takeaways</h2>
+        <div class="keypoints">
+          <h3>Remember</h3>
+          <ul>
+            <li><code class="inline">id</code> must be unique; <code class="inline">class</code> can repeat.</li>
+            <li>Global attributes work on every element.</li>
+            <li><code class="inline">data-*</code> stores custom data readable via <code class="inline">dataset</code>.</li>
+            <li>Prefer classes over inline <code class="inline">style</code> in real projects.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pager">
+        <a href="16-comments.html">
+          <span class="pager-label">← Previous</span>
+          <span class="pager-title">Comments &amp; Best Practices</span>
+        </a>
+        <a href="18-accessibility.html" class="next">
+          <span class="pager-label">Next Lesson →</span>
+          <span class="pager-title">Accessibility (a11y)</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&lt;/&gt; HTML Learning Hub — Lesson 17 of 20 · <span class="lesson-status" id="lesson-status">Not completed yet</span></span>
+      <span><a href="../index.html">Back to home</a></span>
+    </div>
+  </footer>
+
+
+  <script src="../js/app.js" defer></script>
+</body>
+</html>
+
