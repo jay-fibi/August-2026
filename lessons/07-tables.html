@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lesson 7: Learn about HTML tables - table, tr, th, td, colspan, rowspan and captions.">
+  <title>Lesson 07: Tables | HTML Learning Hub</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container">
+      <a href="../index.html" class="brand">
+        <span class="logo">&lt;/&gt;</span>
+        HTML Learning Hub
+      </a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#lessons">Lessons</a>
+      </nav>
+        <div id="auth-area"></div>
+      </div>
+  </header>
+
+  <section class="lesson-header" data-lesson="7">
+    <div class="container">
+      <div class="lesson-breadcrumb"><a href="../index.html">Home</a> / Lesson 07</div>
+      <h1>Tables</h1>
+      <p class="lesson-subtitle">
+        The <code class="inline">table</code> element organises data into rows and columns.
+        Modern HTML groups it with <code class="inline">thead</code>, <code class="inline">tbody</code>
+        and <code class="inline">tfoot</code>.
+      </p>
+      <div class="meta-row">
+        <span class="meta-chip">Lesson 07</span>
+        <span class="meta-chip">Beginner</span>
+        <button type="button" id="toggle-complete" class="btn btn-complete">Mark as Complete</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="lesson-body">
+    <div class="container">
+
+      <div class="card-block">
+        <h2>💡 The Concept</h2>
+        <ul>
+          <li>
+            <code class="inline">tr</code> — a table row; <code class="inline">th</code> — a header
+            cell (bold, centred); <code class="inline">td</code> — a data cell.
+          </li>
+          <li>
+            <code class="inline">caption</code> — a visible title for the table.
+          </li>
+          <li>
+            <code class="inline">colspan</code> — a cell that stretches across multiple columns.
+          </li>
+          <li>
+            <code class="inline">rowspan</code> — a cell that stretches down multiple rows.
+          </li>
+          <li>
+            <code class="inline">scope</code> on <code class="inline">th</code> tells screen readers
+            whether the header applies to its column or its row.
+          </li>
+        </ul>
+        <div class="tip-box">
+          <strong>💡 Tip:</strong> Tables are for <em>tabular data</em>, not page layout. To arrange
+          cards and columns, use CSS Grid or Flexbox instead.
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>🖥️ Live Demo</h2>
+        <p>A league table demonstrating caption, thead/tbody/tfoot, colspan and rowspan:</p>
+        <div class="demo-box">
+          <div class="demo-label">▸ Live Example — Table</div>
+          <table class="lesson-table">
+            <caption style="caption-side:bottom; font-size:0.8rem; color:var(--text-muted); margin-top:6px;">
+              Table 1 — Season results with a caption, spanning cells and grouped rows
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Team</th>
+                <th scope="col">Played</th>
+                <th scope="col">Points</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Red Rovers</th>
+                <td>12</td>
+                <td>30</td>
+              </tr>
+              <tr>
+                <th scope="row">Blue United</th>
+                <td>12</td>
+                <td>27</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="2" style="font-weight:700;">Total matches (colspan=2)</td>
+                <td style="font-weight:700;">24</td>
+              </tr>
+            </tfoot>
+          </table>
+          <p class="demo-note">Note the footer row: its first cell spans 2 columns using colspan="2".</p>
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>📝 Source Code</h2>
+        <div class="code-block">
+          <span class="code-caption">Table with thead, tbody, tfoot and colspan</span>
+          <pre>&lt;table&gt;
+  &lt;caption&gt;Table 1 — Season results&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th scope="col"&gt;Team&lt;/th&gt;&lt;th scope="col"&gt;Points&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;th scope="row"&gt;Red Rovers&lt;/th&gt;&lt;td&gt;30&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th scope="row"&gt;Blue United&lt;/th&gt;&lt;td&gt;27&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;&lt;td colspan="2"&gt;Total&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;</pre>
+        </div>
+      </div>
+
+
+      <div class="card-block">
+        <h2>✅ Key Takeaways</h2>
+        <div class="keypoints">
+          <h3>Remember</h3>
+          <ul>
+            <li>Tables are built from <code class="inline">tr</code> (rows), <code class="inline">th</code> (headers) and <code class="inline">td</code> (cells).</li>
+            <li><code class="inline">thead</code> / <code class="inline">tbody</code> / <code class="inline">tfoot</code> group rows for styling and semantics.</li>
+            <li><code class="inline">colspan</code> and <code class="inline">rowspan</code> merge cells.</li>
+            <li>Use <code class="inline">scope</code> on headers for screen readers.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pager">
+        <a href="06-lists.html">
+          <span class="pager-label">← Previous</span>
+          <span class="pager-title">Lists</span>
+        </a>
+        <a href="08-forms-basic.html" class="next">
+          <span class="pager-label">Next Lesson →</span>
+          <span class="pager-title">Forms — Basic Elements</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&lt;/&gt; HTML Learning Hub — Lesson 07 of 20 · <span class="lesson-status" id="lesson-status">Not completed yet</span></span>
+      <span><a href="../index.html">Back to home</a></span>
+    </div>
+  </footer>
+
+
+  <script src="../js/app.js" defer></script>
+</body>
+</html>
+

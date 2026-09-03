@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lesson 11: Learn the difference between HTML div (block) and span (inline) container elements.">
+  <title>Lesson 11: div vs span | HTML Learning Hub</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container">
+      <a href="../index.html" class="brand">
+        <span class="logo">&lt;/&gt;</span>
+        HTML Learning Hub
+      </a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#lessons">Lessons</a>
+      </nav>
+        <div id="auth-area"></div>
+      </div>
+  </header>
+
+  <section class="lesson-header" data-lesson="11">
+    <div class="container">
+      <div class="lesson-breadcrumb"><a href="../index.html">Home</a> / Lesson 11</div>
+      <h1>div vs span</h1>
+      <p class="lesson-subtitle">
+        Two generic containers: <code class="inline">div</code> is a block-level box that stacks
+        vertically; <code class="inline">span</code> is inline and sits within a line of text.
+      </p>
+      <div class="meta-row">
+        <span class="meta-chip">Lesson 11</span>
+        <span class="meta-chip">Beginner</span>
+        <button type="button" id="toggle-complete" class="btn btn-complete">Mark as Complete</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="lesson-body">
+    <div class="container">
+
+      <div class="card-block">
+        <h2>💡 The Concept</h2>
+        <ul>
+          <li>
+            <strong>Block level (<code class="inline">div</code>)</strong> — takes the full width
+            available and starts on a new line. Perfect for grouping sections, cards and columns.
+          </li>
+          <li>
+            <strong>Inline (<code class="inline">span</code>)</strong> — only as wide as its content
+            and flows with surrounding text. Perfect for highlighting a word or styling a fragment.
+          </li>
+        </ul>
+        <p>
+          Both are "meaningless" containers — they add no semantics, which is why you should prefer
+          semantic elements (lesson 10) when a real meaning exists, and use
+          <code class="inline">div</code>/<code class="inline">span</code> only as a fallback for
+          grouping and styling.
+        </p>
+        <div class="tip-box">
+          <strong>💡 Tip:</strong> Don't nest divs forever. When you find a div holding a heading and
+          a paragraph, consider whether <code class="inline">article</code> or
+          <code class="inline">section</code> says it better.
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>🖥️ Live Demo</h2>
+        <p>Divs stack full-width; spans flow inside a line of text:</p>
+        <div class="demo-box">
+          <div class="demo-label">▸ Live Example — Block vs Inline</div>
+          <div style="background:#dbeafe; padding:10px; border-radius:6px; margin-bottom:8px;">First div — takes the whole width</div>
+          <div style="background:#dbeafe; padding:10px; border-radius:6px;">Second div — starts on a new line</div>
+          <p style="margin-top:10px;">
+            Here is a sentence with a <span style="background:#fde68a; padding:2px 6px; border-radius:4px;">highlighted span</span>
+            that flows inline, plus another <span style="color:#dc2626; font-weight:700;">red span</span> — no line breaks between them.
+          </p>
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>📝 Source Code</h2>
+        <div class="code-block">
+          <span class="code-caption">div (block) vs span (inline)</span>
+          <pre>&lt;div class="card"&gt;
+  &lt;h2&gt;A whole card&lt;/h2&gt;
+  &lt;p&gt;Block containers stack vertically.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Inline styling inside text:
+  &lt;span class="highlight"&gt;this word&lt;/span&gt; stays in the line.&lt;/p&gt;</pre>
+        </div>
+        <p>
+          Resize the window and you'll see each <code class="inline">div</code> always spans the full
+          width, while the <code class="inline">span</code> stays glued to its sentence.
+        </p>
+      </div>
+
+
+      <div class="card-block">
+        <h2>✅ Key Takeaways</h2>
+        <div class="keypoints">
+          <h3>Remember</h3>
+          <ul>
+            <li><code class="inline">div</code> is a block container — full width, stacks vertically.</li>
+            <li><code class="inline">span</code> is inline — flows within a line of text.</li>
+            <li>Both add no meaning; prefer semantic elements when they fit.</li>
+            <li>Use them for grouping, styling hooks and layout wrappers.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pager">
+        <a href="10-semantic-html.html">
+          <span class="pager-label">← Previous</span>
+          <span class="pager-title">Semantic HTML</span>
+        </a>
+        <a href="12-media.html" class="next">
+          <span class="pager-label">Next Lesson →</span>
+          <span class="pager-title">Audio &amp; Video</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&lt;/&gt; HTML Learning Hub — Lesson 11 of 20 · <span class="lesson-status" id="lesson-status">Not completed yet</span></span>
+      <span><a href="../index.html">Back to home</a></span>
+    </div>
+  </footer>
+
+
+  <script src="../js/app.js" defer></script>
+</body>
+</html>
+

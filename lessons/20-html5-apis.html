@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lesson 20: An introduction to HTML5 APIs - canvas, details, dialog, output and native interactive elements.">
+  <title>Lesson 20: HTML5 APIs Introduction | HTML Learning Hub</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container">
+      <a href="../index.html" class="brand">
+        <span class="logo">&lt;/&gt;</span>
+        HTML Learning Hub
+      </a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#lessons">Lessons</a>
+      </nav>
+        <div id="auth-area"></div>
+      </div>
+  </header>
+
+  <section class="lesson-header" data-lesson="20">
+    <div class="container">
+      <div class="lesson-breadcrumb"><a href="../index.html">Home</a> / Lesson 20</div>
+      <h1>HTML5 APIs Introduction</h1>
+      <p class="lesson-subtitle">
+        HTML5 brought powerful built-in features: <code class="inline">canvas</code> for drawing,
+        <code class="inline">details</code>/<code class="inline">summary</code> for accordions,
+        <code class="inline">dialog</code> for modals, and <code class="inline">output</code> for results.
+      </p>
+      <div class="meta-row">
+        <span class="meta-chip">Lesson 20</span>
+        <span class="meta-chip">Intermediate</span>
+        <button type="button" id="toggle-complete" class="btn btn-complete">Mark as Complete</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="lesson-body">
+    <div class="container">
+
+      <div class="card-block">
+        <h2>💡 The Concept</h2>
+        <ul>
+          <li>
+            <code class="inline">canvas</code> — a pixel drawing surface driven by JavaScript (charts,
+            games, art). Requires the <code class="inline">&lt;script&gt;</code> to paint on it.
+          </li>
+          <li>
+            <code class="inline">details</code> / <code class="inline">summary</code> — a
+            JavaScript-free disclosure widget (accordion). Add <code class="inline">open</code> to start expanded.
+          </li>
+          <li>
+            <code class="inline">dialog</code> — a native modal. Opened with
+            <code class="inline">showModal()</code>, closed with <code class="inline">close()</code>.
+          </li>
+          <li>
+            <code class="inline">output</code> — displays the result of a calculation, updated by scripts.
+          </li>
+          <li>
+            Bonus: <code class="inline">progress</code>, <code class="inline">meter</code>, and
+            <code class="inline">datalist</code> are also HTML5.
+          </li>
+        </ul>
+        <div class="tip-box">
+          <strong>💡 Note:</strong> Some HTML5 APIs (Geolocation, Web Storage, Drag &amp; Drop) need
+          JavaScript. The elements shown here are pure HTML that work out of the box.
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>🖥️ Live Demo</h2>
+        <p>Four HTML5 features working with zero frameworks:</p>
+        <div class="demo-box">
+          <div class="demo-label">▸ Live Example — HTML5 Features</div>
+
+          <p style="font-weight:700; font-size:0.9rem;">1. details / summary (no JS)</p>
+          <details style="border:1px solid var(--border); border-radius:8px; padding:10px 14px; margin-bottom:14px; background:#fff;">
+            <summary style="cursor:pointer; font-weight:600;">Click me to expand</summary>
+            <p style="font-size:0.9rem; margin-top:8px;">Hidden content revealed natively — no JavaScript required. Add the <code class="inline">open</code> attribute to start expanded.</p>
+          </details>
+
+          <p style="font-weight:700; font-size:0.9rem;">2. canvas (painted by a tiny script)</p>
+          <canvas id="demo-canvas" width="280" height="90"
+                  style="border:1px solid var(--border); border-radius:8px; background:#fff; margin-bottom:14px;">
+            Your browser does not support canvas.
+          </canvas>
+
+          <p style="font-weight:700; font-size:0.9rem;">3. dialog (native modal)</p>
+          <button type="button" id="open-dialog" style="background:var(--primary); color:#fff; border:none; padding:8px 14px; border-radius:6px; cursor:pointer;">Open dialog</button>
+          <dialog id="demo-dialog" style="border:1px solid var(--border); border-radius:10px; padding:20px;">
+            <p>👋 I'm a native &lt;dialog&gt; element.</p>
+            <button type="button" id="close-dialog" style="background:var(--primary); color:#fff; border:none; padding:6px 12px; border-radius:6px; cursor:pointer;">Close</button>
+          </dialog>
+
+          <p style="font-weight:700; font-size:0.9rem; margin-top:14px;">4. progress</p>
+          <progress value="70" max="100" style="width:100%;">70%</progress>
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>📝 Source Code</h2>
+        <div class="code-block">
+          <span class="code-caption">details, dialog, progress and a canvas paint</span>
+          <pre>&lt;details&gt;
+  &lt;summary&gt;Click me to expand&lt;/summary&gt;
+  &lt;p&gt;Hidden content, no JS.&lt;/p&gt;
+&lt;/details&gt;
+
+&lt;canvas id="c" width="280" height="90"&gt;&lt;/canvas&gt;
+&lt;script&gt;
+  const c = document.getElementById('c');
+  const ctx = c.getContext('2d');
+  ctx.fillStyle = '#2563eb';
+  ctx.fillRect(10, 10, 120, 60);   // rounded blue block
+  ctx.font = '14px Arial';
+  ctx.fillStyle = '#fff';
+  ctx.fillText('Canvas!', 36, 46);
+&lt;/script&gt;
+
+&lt;dialog id="d"&gt;...&lt;/dialog&gt;  &lt;!-- open via d.showModal() --&gt;
+
+&lt;progress value="70" max="100"&gt;&lt;/progress&gt;</pre>
+        </div>
+      </div>
+
+
+      <div class="card-block">
+        <h2>✅ Key Takeaways</h2>
+        <div class="keypoints">
+          <h3>Remember</h3>
+          <ul>
+            <li><code class="inline">details</code> / <code class="inline">summary</code> gives accordions without JavaScript.</li>
+            <li><code class="inline">canvas</code> is a drawing surface painted via JavaScript.</li>
+            <li><code class="inline">dialog</code> is the native modal; open with <code class="inline">showModal()</code>.</li>
+            <li><code class="inline">progress</code>, <code class="inline">meter</code> and <code class="inline">output</code> are pure-HTML feedback widgets.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pager">
+        <a href="19-responsive.html">
+          <span class="pager-label">← Previous</span>
+          <span class="pager-title">Responsive Design</span>
+        </a>
+        <a href="../index.html" class="next">
+          <span class="pager-label">🎓 Course Complete →</span>
+          <span class="pager-title">Back to Learning Hub Home</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&lt;/&gt; HTML Learning Hub — Lesson 20 of 20 · <span class="lesson-status" id="lesson-status">Not completed yet</span></span>
+      <span><a href="../index.html">Back to home</a></span>
+    </div>
+  </footer>
+
+  <script>
+    // Repaint the demo canvas whenever the live editor re-renders.
+    window.__afterLiveRender = function (preview) {
+      var c = preview.querySelector('#demo-canvas');
+      if (!c || !c.getContext) return;
+      var ctx = c.getContext('2d');
+      ctx.fillStyle = '#2563eb';
+      ctx.beginPath();
+      if (ctx.roundRect) ctx.roundRect(10, 15, 150, 60, 10);
+      else ctx.rect(10, 15, 150, 60);
+      ctx.fill();
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 15px Arial';
+      ctx.fillText('Canvas!', 42, 52);
+      ctx.fillStyle = '#059669';
+      ctx.beginPath();
+      ctx.arc(220, 45, 24, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 14px Arial';
+      ctx.fillText('✓', 213, 51);
+    };
+  </script>
+
+
+
+  <script src="../js/app.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lesson 16: Learn about HTML comments and coding best practices for maintainable markup.">
+  <title>Lesson 16: Comments &amp; Best Practices | HTML Learning Hub</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container">
+      <a href="../index.html" class="brand">
+        <span class="logo">&lt;/&gt;</span>
+        HTML Learning Hub
+      </a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#lessons">Lessons</a>
+      </nav>
+        <div id="auth-area"></div>
+      </div>
+  </header>
+
+  <section class="lesson-header" data-lesson="16">
+    <div class="container">
+      <div class="lesson-breadcrumb"><a href="../index.html">Home</a> / Lesson 16</div>
+      <h1>Comments &amp; Best Practices</h1>
+      <p class="lesson-subtitle">
+        Comments <code class="inline">&lt;!-- like this --&gt;</code> are ignored by the browser but
+        invaluable for humans reading your code.
+      </p>
+      <div class="meta-row">
+        <span class="meta-chip">Lesson 16</span>
+        <span class="meta-chip">Beginner</span>
+        <button type="button" id="toggle-complete" class="btn btn-complete">Mark as Complete</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="lesson-body">
+    <div class="container">
+
+      <div class="card-block">
+        <h2>💡 The Concept</h2>
+        <ul>
+          <li>
+            Comments start with <code class="inline">&lt;!--</code> and end with
+            <code class="inline">--&gt;</code>. Everything between them is invisible to visitors.
+          </li>
+          <li>
+            Use them to explain <em>why</em> a section exists, mark TODO items, or temporarily disable
+            a block while debugging.
+          </li>
+          <li>
+            Comments <strong>cannot nest</strong> — the first <code class="inline">--&gt;</code> ends the comment.
+          </li>
+        </ul>
+        <p>Best practices to keep your HTML maintainable:</p>
+        <ul>
+          <li>Indent nested elements consistently (2 spaces is common).</li>
+          <li>Use semantic elements instead of generic divs.</li>
+          <li>Write descriptive <code class="inline">alt</code>, <code class="inline">title</code> and <code class="inline">label</code> text.</li>
+          <li>Keep lowercase tags and quote your attribute values.</li>
+          <li>Comment before complex sections — but delete stale comments.</li>
+        </ul>
+      </div>
+
+      <div class="card-block">
+        <h2>🖥️ Live Demo</h2>
+        <p>Comments are invisible — but here's what a commented-upon section looks like rendered:</p>
+        <div class="demo-box">
+          <div class="demo-label">▸ Live Example — Commented Markup Rendered</div>
+          <section style="background:#fff; border:1px solid var(--border); border-radius:8px; padding:14px 16px;">
+            <h3 style="font-size:1rem; color:var(--primary-dark);">Product Card</h3>
+            <p style="font-size:0.9rem;">This block was surrounded by comments in the source.</p>
+            <button type="button" style="background:var(--primary); color:#fff; border:none; padding:8px 14px; border-radius:6px; cursor:pointer;">Add to cart</button>
+          </section>
+          <p class="demo-note">Right-click → Inspect to see the comments in the raw source below.</p>
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>📝 Source Code</h2>
+        <div class="code-block">
+          <span class="code-caption">How comments look in source</span>
+          <pre>&lt;!-- ================= --&gt;
+&lt;!-- Product card      --&gt;
+&lt;!-- TODO: add sale price --&gt;
+&lt;!-- ================= --&gt;
+&lt;section class="product-card"&gt;
+  &lt;h3&gt;Product Card&lt;/h3&gt;
+  &lt;button type="button"&gt;Add to cart&lt;/button&gt;
+&lt;/section&gt;
+&lt;!-- /Product card --&gt;</pre>
+        </div>
+        <div class="tip-box">
+          <strong>💡 Best practice:</strong> Comment the <em>why</em>, not the <em>what</em>. A comment
+          saying <code class="inline">&lt;!-- nav starts here --&gt;</code> adds nothing; one explaining
+          a browser quirk saves future debugging hours.
+        </div>
+      </div>
+
+
+      <div class="card-block">
+        <h2>✅ Key Takeaways</h2>
+        <div class="keypoints">
+          <h3>Remember</h3>
+          <ul>
+            <li>Comments use <code class="inline">&lt;!-- ... --&gt;</code> and never render.</li>
+            <li>Explain <em>why</em>, not what; remove stale comments.</li>
+            <li>Keep markup lowercase, indented, quoted and semantic.</li>
+            <li>Consistent structure is the foundation of maintainable HTML.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pager">
+        <a href="15-entities.html">
+          <span class="pager-label">← Previous</span>
+          <span class="pager-title">Entities &amp; Special Characters</span>
+        </a>
+        <a href="17-attributes.html" class="next">
+          <span class="pager-label">Next Lesson →</span>
+          <span class="pager-title">Global &amp; Data Attributes</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&lt;/&gt; HTML Learning Hub — Lesson 16 of 20 · <span class="lesson-status" id="lesson-status">Not completed yet</span></span>
+      <span><a href="../index.html">Back to home</a></span>
+    </div>
+  </footer>
+
+
+  <script src="../js/app.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lesson 6: Learn about HTML lists - unordered, ordered and description lists with nesting.">
+  <title>Lesson 06: Lists | HTML Learning Hub</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container">
+      <a href="../index.html" class="brand">
+        <span class="logo">&lt;/&gt;</span>
+        HTML Learning Hub
+      </a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#lessons">Lessons</a>
+      </nav>
+        <div id="auth-area"></div>
+      </div>
+  </header>
+
+  <section class="lesson-header" data-lesson="6">
+    <div class="container">
+      <div class="lesson-breadcrumb"><a href="../index.html">Home</a> / Lesson 06</div>
+      <h1>Lists</h1>
+      <p class="lesson-subtitle">
+        Three list types cover almost every scenario: unordered (<code class="inline">ul</code>),
+        ordered (<code class="inline">ol</code>) and description lists (<code class="inline">dl</code>).
+      </p>
+      <div class="meta-row">
+        <span class="meta-chip">Lesson 06</span>
+        <span class="meta-chip">Beginner</span>
+        <button type="button" id="toggle-complete" class="btn btn-complete">Mark as Complete</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="lesson-body">
+    <div class="container">
+
+      <div class="card-block">
+        <h2>💡 The Concept</h2>
+        <ul>
+          <li>
+            <code class="inline">ul</code> + <code class="inline">li</code> — bulleted list when order
+            doesn't matter (shopping lists, nav menus).
+          </li>
+          <li>
+            <code class="inline">ol</code> + <code class="inline">li</code> — numbered list when order
+            matters (steps in a recipe, rankings). The <code class="inline">type</code> attribute
+            switches numbering (1, A, a, I, i) and <code class="inline">start</code> sets the first value.
+          </li>
+          <li>
+            <code class="inline">dl</code> with <code class="inline">dt</code> (term) and
+            <code class="inline">dd</code> (description) — glossary-style pairs.
+          </li>
+        </ul>
+        <p>
+          Lists nest inside each other freely — just remember an <code class="inline">li</code> is
+          the only valid direct child of <code class="inline">ul</code> or <code class="inline">ol</code>.
+        </p>
+      </div>
+
+      <div class="card-block">
+        <h2>🖥️ Live Demo</h2>
+        <p>All three list types, plus a nested list:</p>
+        <div class="demo-box">
+          <div class="demo-label">▸ Live Example — ul, ol, dl, nested</div>
+          <h3 style="font-size:1rem;">Shopping list (unordered)</h3>
+          <ul>
+            <li>Apples</li>
+            <li>Bananas</li>
+            <li>Bread</li>
+          </ul>
+          <h3 style="font-size:1rem;">Bake the cake (ordered)</h3>
+          <ol type="1" start="1">
+            <li>Preheat the oven to 180°C.</li>
+            <li>Mix flour and sugar.</li>
+            <li>Bake for 30 minutes.</li>
+          </ol>
+          <h3 style="font-size:1rem;">HTML glossary (description list)</h3>
+          <dl>
+            <dt><code class="inline">ul</code></dt>
+            <dd>Unordered list — bullet points.</dd>
+            <dt><code class="inline">ol</code></dt>
+            <dd>Ordered list — numbered points.</dd>
+          </dl>
+          <h3 style="font-size:1rem;">Nested list</h3>
+          <ul>
+            <li>Fruits
+              <ul>
+                <li>Citrus</li>
+                <li>Berries</li>
+              </ul>
+            </li>
+            <li>Vegetables</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>📝 Source Code</h2>
+        <div class="code-block">
+          <span class="code-caption">The three list types</span>
+          <pre>&lt;ul&gt;
+  &lt;li&gt;Apples&lt;/li&gt;
+  &lt;li&gt;Bananas&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol type="1" start="1"&gt;
+  &lt;li&gt;Mix flour and sugar.&lt;/li&gt;
+  &lt;li&gt;Bake for 30 minutes.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+&lt;/dl&gt;</pre>
+        </div>
+      </div>
+
+
+      <div class="card-block">
+        <h2>✅ Key Takeaways</h2>
+        <div class="keypoints">
+          <h3>Remember</h3>
+          <ul>
+            <li><code class="inline">ul</code> for unordered, <code class="inline">ol</code> for ordered, <code class="inline">dl</code> for term/description pairs.</li>
+            <li>Only <code class="inline">li</code> can be a direct child of <code class="inline">ul</code> / <code class="inline">ol</code>.</li>
+            <li>Lists nest — a nested list goes inside an <code class="inline">li</code>.</li>
+            <li>Use <code class="inline">type</code> and <code class="inline">start</code> to control numbering.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pager">
+        <a href="05-images.html">
+          <span class="pager-label">← Previous</span>
+          <span class="pager-title">Images &amp; Alt Text</span>
+        </a>
+        <a href="07-tables.html" class="next">
+          <span class="pager-label">Next Lesson →</span>
+          <span class="pager-title">Tables</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&lt;/&gt; HTML Learning Hub — Lesson 06 of 20 · <span class="lesson-status" id="lesson-status">Not completed yet</span></span>
+      <span><a href="../index.html">Back to home</a></span>
+    </div>
+  </footer>
+
+
+  <script src="../js/app.js" defer></script>
+</body>
+</html>
+

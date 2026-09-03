@@ -1,0 +1,8 @@
+{
+  "appName": "Basic Web Example",
+  "version": "1.0.0",
+  "environment": "development",
+  "features": {
+    "greeting": true
+  }
+}

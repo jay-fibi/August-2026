@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lesson 5: Learn about HTML images - img tag, alt text, width, height and figure elements.">
+  <title>Lesson 05: Images &amp; Alt Text | HTML Learning Hub</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container">
+      <a href="../index.html" class="brand">
+        <span class="logo">&lt;/&gt;</span>
+        HTML Learning Hub
+      </a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#lessons">Lessons</a>
+      </nav>
+        <div id="auth-area"></div>
+      </div>
+  </header>
+
+  <section class="lesson-header" data-lesson="5">
+    <div class="container">
+      <div class="lesson-breadcrumb"><a href="../index.html">Home</a> / Lesson 05</div>
+      <h1>Images &amp; Alt Text</h1>
+      <p class="lesson-subtitle">
+        The <code class="inline">img</code> element embeds pictures into a page. It is a
+        <em>void element</em> — it has no closing tag — and its two most important attributes are
+        <code class="inline">src</code> and <code class="inline">alt</code>.
+      </p>
+      <div class="meta-row">
+        <span class="meta-chip">Lesson 05</span>
+        <span class="meta-chip">Beginner</span>
+        <button type="button" id="toggle-complete" class="btn btn-complete">Mark as Complete</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="lesson-body">
+    <div class="container">
+
+      <div class="card-block">
+        <h2>🖥️ Live Demo</h2>
+        <p>Three images, including a captioned figure and a lazy-loaded one:</p>
+        <div class="demo-box">
+          <div class="demo-label">▸ Live Example — Images</div>
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='180'%3E%3Crect width='300' height='180' fill='%232563eb'/%3E%3Ctext x='150' y='100' font-family='Arial' font-size='20' fill='white' text-anchor='middle'%3EHTML Learning Hub%3C/text%3E%3C/svg%3E"
+               alt="Blue banner reading 'HTML Learning Hub'" width="300" height="180" style="border-radius:8px;">
+          <figure style="margin: 14px 0;">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='180'%3E%3Crect width='300' height='180' fill='%23059669'/%3E%3Ctext x='150' y='100' font-family='Arial' font-size='20' fill='white' text-anchor='middle'%3EA Captioned Image%3C/text%3E%3C/svg%3E"
+                 alt="Green banner reading 'A Captioned Image'" width="300" height="180" loading="lazy" style="border-radius:8px;">
+            <figcaption style="font-size:0.85rem; color:var(--text-muted);">Fig. 1 — The &lt;figcaption&gt; adds a caption to this &lt;figure&gt;.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>📝 Source Code</h2>
+        <div class="code-block">
+          <span class="code-caption">img, figure, figcaption, lazy loading</span>
+          <pre>&lt;img src="photo.jpg" alt="A mountain at sunset" width="300" height="180"&gt;
+
+&lt;figure&gt;
+  &lt;img src="photo.jpg" alt="A mountain at sunset" loading="lazy"&gt;
+  &lt;figcaption&gt;Fig. 1 — Mount Everest at sunset&lt;/figcaption&gt;
+&lt;/figure&gt;</pre>
+        </div>
+        <div class="tip-box">
+          <strong>💡 Tip:</strong> Always write a descriptive <code class="inline">alt</code>. If the
+          image fails or the user is blind, the alt text becomes the content.
+        </div>
+      </div>
+
+
+      <div class="card-block">
+        <h2>💡 The Concept</h2>
+        <ul>
+          <li>
+            <code class="inline">src</code> — the path or URL of the image file.
+          </li>
+          <li>
+            <code class="inline">alt</code> — a text description. It shows if the image fails to load
+            and is read aloud by screen readers. It's also used by search engines.
+          </li>
+          <li>
+            <code class="inline">width</code> / <code class="inline">height</code> — reserve space and
+            prevent layout shifting while the image loads.
+          </li>
+          <li>
+            <code class="inline">figure</code> / <code class="inline">figcaption</code> — pair an image
+            with a caption.
+          </li>
+          <li>
+            <code class="inline">loading="lazy"</code> — defer off-screen images until the user scrolls to them.
+          </li>
+        </ul>
+        <div class="tip-box">
+          <strong>💡 Tip:</strong> For decorative images that add no information, use an empty
+          <code class="inline">alt=""</code> so screen readers skip them entirely.
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>✅ Key Takeaways</h2>
+        <div class="keypoints">
+          <h3>Remember</h3>
+          <ul>
+            <li>The <code class="inline">img</code> tag needs <code class="inline">src</code> and a descriptive <code class="inline">alt</code>.</li>
+            <li><code class="inline">width</code>/<code class="inline">height</code> prevent layout jumps while images load.</li>
+            <li><code class="inline">figure</code> + <code class="inline">figcaption</code> add captions.</li>
+            <li><code class="inline">loading="lazy"</code> speeds up pages with many images.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pager">
+        <a href="04-links.html">
+          <span class="pager-label">← Previous</span>
+          <span class="pager-title">Hyperlinks &amp; Anchors</span>
+        </a>
+        <a href="06-lists.html" class="next">
+          <span class="pager-label">Next Lesson →</span>
+          <span class="pager-title">Lists</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&lt;/&gt; HTML Learning Hub — Lesson 05 of 20 · <span class="lesson-status" id="lesson-status">Not completed yet</span></span>
+      <span><a href="../index.html">Back to home</a></span>
+    </div>
+  </footer>
+
+
+  <script src="../js/app.js" defer></script>
+</body>
+</html>
+

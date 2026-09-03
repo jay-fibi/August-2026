@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lesson 19: Learn responsive design - viewport meta, media queries, picture and srcset for mobile-friendly pages.">
+  <title>Lesson 19: Responsive Design | HTML Learning Hub</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .responsive-demo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 10px;
+    }
+    .responsive-demo > div {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+      font-weight: 700;
+    }
+    .media-query-box {
+      background: #dcfce7;
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 700;
+    }
+    @media (max-width: 480px) {
+      .media-query-box {
+        background: #fee2e2;
+        color: #991b1b;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container">
+      <a href="../index.html" class="brand">
+        <span class="logo">&lt;/&gt;</span>
+        HTML Learning Hub
+      </a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#lessons">Lessons</a>
+      </nav>
+        <div id="auth-area"></div>
+      </div>
+  </header>
+
+  <section class="lesson-header" data-lesson="19">
+    <div class="container">
+      <div class="lesson-breadcrumb"><a href="../index.html">Home</a> / Lesson 19</div>
+      <h1>Responsive Design</h1>
+      <p class="lesson-subtitle">
+        Responsive pages adapt to any screen. Three key tools: the
+        <code class="inline">viewport</code> meta tag, CSS media queries, and flexible media with
+        <code class="inline">picture</code> / <code class="inline">srcset</code>.
+      </p>
+      <div class="meta-row">
+        <span class="meta-chip">Lesson 19</span>
+        <span class="meta-chip">Intermediate</span>
+        <button type="button" id="toggle-complete" class="btn btn-complete">Mark as Complete</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="lesson-body">
+    <div class="container">
+
+      <div class="card-block">
+        <h2>💡 The Concept</h2>
+        <ul>
+          <li>
+            <code class="inline">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code>
+            — without it, phones render a zoomed-out desktop page.
+          </li>
+          <li>
+            <strong>Fluid layouts</strong> — percentages, <code class="inline">fr</code> units and
+            <code class="inline">auto-fit</code> grids that reflow instead of fixed pixel widths.
+          </li>
+          <li>
+            <strong>Media queries</strong> — <code class="inline">@media (max-width: 480px)</code>
+            applies CSS only below that width.
+          </li>
+          <li>
+            <code class="inline">srcset</code> / <code class="inline">sizes</code> — serve smaller
+            images to small screens; <code class="inline">picture</code> offers per-breakpoint art direction.
+          </li>
+        </ul>
+      </div>
+
+      <div class="card-block">
+        <h2>🖥️ Live Demo</h2>
+        <p>Resize this window — the grid below reflows automatically, and the box changes colour on small screens:</p>
+        <div class="demo-box">
+          <div class="demo-label">▸ Live Example — Responsive Behaviour</div>
+          <div class="responsive-demo">
+            <div>Card 1</div>
+            <div>Card 2</div>
+            <div>Card 3</div>
+            <div>Card 4</div>
+            <div>Card 5</div>
+            <div>Card 6</div>
+          </div>
+          <div class="media-query-box" style="margin-top:12px;">
+            I'm green on wide screens → red under 480px wide (media query in the page's &lt;style&gt;).
+          </div>
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>📝 Source Code</h2>
+        <div class="code-block">
+          <span class="code-caption">Fluid grid + media query + responsive images</span>
+          <pre>&lt;!-- viewport meta in &lt;head&gt; --&gt;
+&lt;meta name="viewport"
+      content="width=device-width, initial-scale=1"&gt;
+
+&lt;!-- fluid grid --&gt;
+.responsive-demo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+/* media query */
+@media (max-width: 480px) {
+  .box { background: #fee2e2; }
+}
+
+&lt;!-- responsive image (serves different files) --&gt;
+&lt;img srcset="small.jpg 480w, large.jpg 1200w"
+     sizes="(max-width: 600px) 480px, 1200px"
+     src="large.jpg" alt="Example"&gt;</pre>
+        </div>
+        <div class="tip-box">
+          <strong>💡 Mobile-first:</strong> Write the base styles for small screens, then use
+          <code class="inline">min-width</code> media queries to enhance larger ones.
+        </div>
+      </div>
+
+
+      <div class="card-block">
+        <h2>✅ Key Takeaways</h2>
+        <div class="keypoints">
+          <h3>Remember</h3>
+          <ul>
+            <li>The viewport meta tag is essential for mobile rendering.</li>
+            <li>Use fluid grids and relative units instead of fixed widths.</li>
+            <li>Media queries adapt styles per screen size.</li>
+            <li><code class="inline">srcset</code> / <code class="inline">picture</code> serve the right image to the right device.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pager">
+        <a href="18-accessibility.html">
+          <span class="pager-label">← Previous</span>
+          <span class="pager-title">Accessibility (a11y)</span>
+        </a>
+        <a href="20-html5-apis.html" class="next">
+          <span class="pager-label">Next Lesson →</span>
+          <span class="pager-title">HTML5 APIs Introduction</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&lt;/&gt; HTML Learning Hub — Lesson 19 of 20 · <span class="lesson-status" id="lesson-status">Not completed yet</span></span>
+      <span><a href="../index.html">Back to home</a></span>
+    </div>
+  </footer>
+
+
+  <script src="../js/app.js" defer></script>
+</body>
+</html>
+

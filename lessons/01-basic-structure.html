@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lesson 1: Learn the basic structure of an HTML document - DOCTYPE, html, head and body.">
+  <title>Lesson 01: HTML Document Structure | HTML Learning Hub</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container">
+      <a href="../index.html" class="brand">
+        <span class="logo">&lt;/&gt;</span>
+        HTML Learning Hub
+      </a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#lessons">Lessons</a>
+      </nav>
+        <div id="auth-area"></div>
+      </div>
+  </header>
+
+  <section class="lesson-header" data-lesson="1">
+    <div class="container">
+      <div class="lesson-breadcrumb"><a href="../index.html">Home</a> / Lesson 01</div>
+      <h1>HTML Document Structure</h1>
+      <p class="lesson-subtitle">
+        Every web page starts with the same skeleton: a DOCTYPE declaration, an
+        <code class="inline">html</code> root element, a <code class="inline">head</code> for
+        metadata, and a <code class="inline">body</code> for visible content.
+      </p>
+      <div class="meta-row">
+        <span class="meta-chip">Lesson 01</span>
+        <span class="meta-chip">Beginner</span>
+        <button type="button" id="toggle-complete" class="btn btn-complete">Mark as Complete</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="lesson-body">
+    <div class="container">
+
+      <div class="card-block">
+        <h2>💡 The Concept</h2>
+        <p>
+          An HTML document is made up of four essential building blocks that appear in this exact order:
+        </p>
+        <ul>
+          <li>
+            <code class="inline">&lt;!DOCTYPE html&gt;</code> — tells the browser this is an HTML5
+            document, so it renders in standards mode instead of quirks mode.
+          </li>
+
+      <div class="card-block">
+        <h2>🖥️ Live Demo</h2>
+        <p>The mini page below shows how the four structural blocks come together:</p>
+        <div class="demo-box">
+          <div class="demo-label">▸ Live Example — A Minimal HTML Page</div>
+          <h3 style="color: #2563eb; margin-bottom: 6px;">Welcome to my first page</h3>
+          <p>This paragraph lives inside the &lt;body&gt;. The page title above lives in the &lt;head&gt; as a &lt;title&gt; element (look at your browser tab!).</p>
+          <p class="demo-note">Right-click this page and choose "View Page Source" — the first line will be &lt;!DOCTYPE html&gt;.</p>
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>📝 Source Code</h2>
+        <div class="code-block">
+          <span class="code-caption">The 4-part skeleton every page needs</span>
+          <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;Everything visible goes here.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+        </div>
+        <p>
+          Notice how the <code class="inline">head</code> holds the <code class="inline">meta</code>
+          and <code class="inline">title</code> tags while the <code class="inline">body</code> holds
+          the visible <code class="inline">h1</code> and <code class="inline">p</code> content.
+        </p>
+      </div>
+
+          <li>
+            <code class="inline">&lt;html&gt;</code> — the root element that wraps absolutely
+            everything. The <code class="inline">lang</code> attribute tells search engines and
+            screen readers which language the page is written in.
+          </li>
+          <li>
+            <code class="inline">&lt;head&gt;</code> — invisible metadata: the page title, character
+            encoding, stylesheets, and other setup information.
+          </li>
+          <li>
+            <code class="inline">&lt;body&gt;</code> — everything the user actually sees and
+            interacts with: text, images, buttons, and so on.
+          </li>
+        </ul>
+        <div class="tip-box">
+          <strong>💡 Tip:</strong> Always indent nested elements. Browsers don't care, but your
+          future self (and teammates) will thank you for readable markup.
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>✅ Key Takeaways</h2>
+        <div class="keypoints">
+          <h3>Remember</h3>
+          <ul>
+            <li>Every HTML page starts with <code class="inline">&lt;!DOCTYPE html&gt;</code>.</li>
+            <li>The <code class="inline">&lt;html lang="en"&gt;</code> root wraps the whole document.</li>
+            <li>The <code class="inline">&lt;head&gt;</code> carries metadata; the <code class="inline">&lt;body&gt;</code> carries visible content.</li>
+            <li>Indent nested tags to keep your markup readable.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pager">
+        <a href="../index.html">
+          <span class="pager-label">← Back to</span>
+          <span class="pager-title">Learning Hub Home</span>
+        </a>
+        <a href="02-headings.html" class="next">
+          <span class="pager-label">Next Lesson →</span>
+          <span class="pager-title">Headings &amp; Hierarchy</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&lt;/&gt; HTML Learning Hub — Lesson 01 of 20 · <span class="lesson-status" id="lesson-status">Not completed yet</span></span>
+      <span><a href="../index.html">Back to home</a></span>
+    </div>
+  </footer>
+
+
+  <script src="../js/app.js" defer></script>
+</body>
+</html>
+

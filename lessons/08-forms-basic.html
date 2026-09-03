@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lesson 8: Learn basic HTML form elements - form, input types, labels, placeholders and buttons.">
+  <title>Lesson 08: Forms — Basic Elements | HTML Learning Hub</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container">
+      <a href="../index.html" class="brand">
+        <span class="logo">&lt;/&gt;</span>
+        HTML Learning Hub
+      </a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#lessons">Lessons</a>
+      </nav>
+        <div id="auth-area"></div>
+      </div>
+  </header>
+
+  <section class="lesson-header" data-lesson="8">
+    <div class="container">
+      <div class="lesson-breadcrumb"><a href="../index.html">Home</a> / Lesson 08</div>
+      <h1>Forms — Basic Elements</h1>
+      <p class="lesson-subtitle">
+        Forms collect user input. A form is wrapped in <code class="inline">form</code>, with each
+        field in a <code class="inline">label</code> paired to an <code class="inline">input</code>.
+      </p>
+      <div class="meta-row">
+        <span class="meta-chip">Lesson 08</span>
+        <span class="meta-chip">Beginner</span>
+        <button type="button" id="toggle-complete" class="btn btn-complete">Mark as Complete</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="lesson-body">
+    <div class="container">
+
+      <div class="card-block">
+        <h2>💡 The Concept</h2>
+        <ul>
+          <li>
+            <code class="inline">&lt;label for="id"&gt;</code> — clicking the label focuses its input.
+            The <code class="inline">for</code> attribute must match the input's <code class="inline">id</code>.
+          </li>
+          <li>
+            <code class="inline">&lt;input type="..."&gt;</code> — the field type changes behaviour:
+            <code class="inline">text</code>, <code class="inline">email</code>,
+            <code class="inline">password</code>, <code class="inline">number</code>,
+            <code class="inline">date</code> and more.
+          </li>
+          <li>
+            <code class="inline">placeholder</code> — ghost text hinting what to type.
+          </li>
+          <li>
+            <code class="inline">name</code> — the key sent to the server for this value.
+          </li>
+          <li>
+            <code class="inline">required</code> — the browser blocks submission until the field is filled.
+          </li>
+          <li>
+            <code class="inline">&lt;textarea&gt;</code> — multi-line text; <code class="inline">button</code>
+            and <code class="inline">&lt;input type="submit"&gt;</code> submit the form.
+          </li>
+        </ul>
+      </div>
+
+      <div class="card-block">
+        <h2>🖥️ Live Demo</h2>
+        <p>Fill in the form — note how the browser validates the required and email fields:</p>
+        <div class="demo-box">
+          <div class="demo-label">▸ Live Example — Basic Form</div>
+          <form action="#" method="get" style="max-width: 420px;">
+            <p style="margin-bottom: 10px;">
+              <label for="name"><strong>Full name:</strong></label><br>
+              <input type="text" id="name" name="name" placeholder="e.g. Ada Lovelace" required style="width:100%; padding:8px; border:1px solid var(--border); border-radius:6px;">
+            </p>
+            <p style="margin-bottom: 10px;">
+              <label for="email"><strong>Email:</strong></label><br>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required style="width:100%; padding:8px; border:1px solid var(--border); border-radius:6px;">
+            </p>
+            <p style="margin-bottom: 10px;">
+              <label for="bio"><strong>Short bio:</strong></label><br>
+              <textarea id="bio" name="bio" rows="3" placeholder="Tell us about yourself..." style="width:100%; padding:8px; border:1px solid var(--border); border-radius:6px;"></textarea>
+            </p>
+            <button type="submit" style="background:var(--primary); color:#fff; border:none; padding:10px 18px; border-radius:6px; cursor:pointer;">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>📝 Source Code</h2>
+        <div class="code-block">
+          <span class="code-caption">Label + input pairing with placeholder and required</span>
+          <pre>&lt;label for="name"&gt;Full name:&lt;/label&gt;
+&lt;input type="text" id="name" name="name"
+       placeholder="e.g. Ada Lovelace" required&gt;
+
+&lt;label for="email"&gt;Email:&lt;/label&gt;
+&lt;input type="email" id="email" name="email" required&gt;
+
+&lt;label for="bio"&gt;Short bio:&lt;/label&gt;
+&lt;textarea id="bio" name="bio" rows="3"&gt;&lt;/textarea&gt;
+
+&lt;button type="submit"&gt;Submit&lt;/button&gt;</pre>
+        </div>
+        <div class="tip-box">
+          <strong>💡 Tip:</strong> The <code class="inline">for</code> / <code class="inline">id</code>
+          pairing is what makes the label clickable and accessible to screen readers.
+        </div>
+      </div>
+
+
+      <div class="card-block">
+        <h2>✅ Key Takeaways</h2>
+        <div class="keypoints">
+          <h3>Remember</h3>
+          <ul>
+            <li>Every field should be paired with a <code class="inline">label</code> using <code class="inline">for</code> = input <code class="inline">id</code>.</li>
+            <li>The <code class="inline">type</code> attribute gives mobile keyboards and validation for free.</li>
+            <li><code class="inline">required</code> and <code class="inline">placeholder</code> improve usability instantly.</li>
+            <li>Use <code class="inline">textarea</code> for multi-line text and <code class="inline">button</code> for submitting.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pager">
+        <a href="07-tables.html">
+          <span class="pager-label">← Previous</span>
+          <span class="pager-title">Tables</span>
+        </a>
+        <a href="09-forms-advanced.html" class="next">
+          <span class="pager-label">Next Lesson →</span>
+          <span class="pager-title">Forms — Advanced Controls</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&lt;/&gt; HTML Learning Hub — Lesson 08 of 20 · <span class="lesson-status" id="lesson-status">Not completed yet</span></span>
+      <span><a href="../index.html">Back to home</a></span>
+    </div>
+  </footer>
+
+
+  <script src="../js/app.js" defer></script>
+</body>
+</html>
+

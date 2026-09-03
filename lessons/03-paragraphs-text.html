@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lesson 3: Learn HTML paragraph tags and text formatting elements like strong, em, br, hr and more.">
+  <title>Lesson 03: Paragraphs &amp; Text Formatting | HTML Learning Hub</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container">
+      <a href="../index.html" class="brand">
+        <span class="logo">&lt;/&gt;</span>
+        HTML Learning Hub
+      </a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#lessons">Lessons</a>
+      </nav>
+        <div id="auth-area"></div>
+      </div>
+  </header>
+
+  <section class="lesson-header" data-lesson="3">
+    <div class="container">
+      <div class="lesson-breadcrumb"><a href="../index.html">Home</a> / Lesson 03</div>
+      <h1>Paragraphs &amp; Text Formatting</h1>
+      <p class="lesson-subtitle">
+        The <code class="inline">p</code> tag holds blocks of text, and a family of inline tags add
+        meaning and emphasis: <code class="inline">strong</code>, <code class="inline">em</code>,
+        <code class="inline">mark</code>, and more.
+      </p>
+      <div class="meta-row">
+        <span class="meta-chip">Lesson 03</span>
+        <span class="meta-chip">Beginner</span>
+        <button type="button" id="toggle-complete" class="btn btn-complete">Mark as Complete</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="lesson-body">
+    <div class="container">
+
+      <div class="card-block">
+        <h2>💡 The Concept</h2>
+
+      <div class="card-block">
+        <h2>🖥️ Live Demo</h2>
+        <p>Each formatting tag in action inside a paragraph:</p>
+        <div class="demo-box">
+          <div class="demo-label">▸ Live Example — Text Formatting</div>
+          <p>This is a normal paragraph. Here is <strong>strong / important</strong> text, and here is <em>emphasised / italic</em> text.</p>
+          <p>This word is <mark>highlighted</mark>, and this is <small>small / fine print</small>.</p>
+          <p>The old price was <del>$49</del>, the new price is <ins>$39</ins>.</p>
+          <p>Water is H<sub>2</sub>O and 10<sup>2</sup> equals 100.</p>
+          <p>One line of text.<br>Another line after a line break.</p>
+          <hr>
+          <p>Everything above the line was separated with an &lt;hr&gt; thematic break.</p>
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>📝 Source Code</h2>
+        <div class="code-block">
+          <span class="code-caption">Formatting tags used above</span>
+          <pre>&lt;p&gt;This is &lt;strong&gt;important&lt;/strong&gt; and &lt;em&gt;emphasised&lt;/em&gt; text.&lt;/p&gt;
+&lt;p&gt;This word is &lt;mark&gt;highlighted&lt;/mark&gt;.&lt;/p&gt;
+&lt;p&gt;Old price &lt;del&gt;$49&lt;/del&gt;, new price &lt;ins&gt;$39&lt;/ins&gt;.&lt;/p&gt;
+&lt;p&gt;Water is H&lt;sub&gt;2&lt;/sub&gt;O and 10&lt;sup&gt;2&lt;/sup&gt; = 100.&lt;/p&gt;
+&lt;p&gt;Line one.&lt;br&gt;Line two.&lt;/p&gt;
+&lt;hr&gt;</pre>
+        </div>
+        <div class="tip-box">
+          <strong>💡 Tip:</strong> <code class="inline">&lt;strong&gt;</code> and
+          <code class="inline">&lt;em&gt;</code> carry meaning; old tags like
+          <code class="inline">&lt;b&gt;</code> and <code class="inline">&lt;i&gt;</code> are purely
+          visual. Prefer the semantic versions.
+        </div>
+      </div>
+
+        <p>
+          Text on the web is wrapped in paragraphs. Inside a paragraph you can use inline formatting
+          elements that add both <em>visual</em> and <em>semantic</em> meaning:
+        </p>
+        <ul>
+          <li><code class="inline">strong</code> — important text (bold).</li>
+          <li><code class="inline">em</code> — emphasised text (italic).</li>
+          <li><code class="inline">mark</code> — highlighted / marked text.</li>
+          <li><code class="inline">small</code> — fine print, like disclaimers.</li>
+          <li><code class="inline">del</code> and <code class="inline">ins</code> — deleted / inserted text.</li>
+          <li><code class="inline">sub</code> and <code class="inline">sup</code> — subscripts and superscripts.</li>
+          <li><code class="inline">br</code> — a line break, and <code class="inline">hr</code> — a thematic break (horizontal rule).</li>
+        </ul>
+        <div class="tip-box">
+          <strong>💡 Tip:</strong> Use <code class="inline">&lt;br&gt;</code> sparingly — for
+          addresses or poems. To create vertical space between blocks, use margins in CSS instead.
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>✅ Key Takeaways</h2>
+        <div class="keypoints">
+          <h3>Remember</h3>
+          <ul>
+            <li><code class="inline">&lt;p&gt;</code> wraps paragraphs; inline tags style text inside them.</li>
+            <li><code class="inline">strong</code> and <code class="inline">em</code> add real meaning, not just bold/italic.</li>
+            <li><code class="inline">&lt;br&gt;</code> forces a line break; <code class="inline">&lt;hr&gt;</code> adds a thematic divider.</li>
+            <li>Use <code class="inline">mark</code>, <code class="inline">del</code>, <code class="inline">ins</code>, <code class="inline">sub</code>, <code class="inline">sup</code> for their specific purposes.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pager">
+        <a href="02-headings.html">
+          <span class="pager-label">← Previous</span>
+          <span class="pager-title">Headings &amp; Hierarchy</span>
+        </a>
+        <a href="04-links.html" class="next">
+          <span class="pager-label">Next Lesson →</span>
+          <span class="pager-title">Hyperlinks &amp; Anchors</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&lt;/&gt; HTML Learning Hub — Lesson 03 of 20 · <span class="lesson-status" id="lesson-status">Not completed yet</span></span>
+      <span><a href="../index.html">Back to home</a></span>
+    </div>
+  </footer>
+
+
+  <script src="../js/app.js" defer></script>
+</body>
+</html>
+

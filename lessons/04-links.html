@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lesson 4: Learn about HTML hyperlinks and anchor tags - href, target attributes, internal and external links.">
+  <title>Lesson 04: Hyperlinks &amp; Anchors | HTML Learning Hub</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container">
+      <a href="../index.html" class="brand">
+        <span class="logo">&lt;/&gt;</span>
+        HTML Learning Hub
+      </a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#lessons">Lessons</a>
+      </nav>
+        <div id="auth-area"></div>
+      </div>
+  </header>
+
+  <section class="lesson-header" data-lesson="4">
+    <div class="container">
+      <div class="lesson-breadcrumb"><a href="../index.html">Home</a> / Lesson 04</div>
+      <h1>Hyperlinks &amp; Anchors</h1>
+      <p class="lesson-subtitle">
+        The <code class="inline">a</code> (anchor) element turns text or images into clickable links,
+        connecting pages across the web and inside your own site.
+      </p>
+      <div class="meta-row">
+        <span class="meta-chip">Lesson 04</span>
+        <span class="meta-chip">Beginner</span>
+        <button type="button" id="toggle-complete" class="btn btn-complete">Mark as Complete</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="lesson-body">
+    <div class="container">
+
+
+      <div class="card-block">
+        <h2>🖥️ Live Demo</h2>
+        <p>Try each link below — every type of href is demonstrated:</p>
+        <div class="demo-box">
+          <div class="demo-label">▸ Live Example — Links</div>
+          <p>
+            <a href="../index.html">🔗 Internal link</a> — back to the home page (relative path).<br>
+            <a href="#concept">🔗 Anchor link</a> — jumps to the concept section above.<br>
+            <a href="https://developer.mozilla.org" target="_blank" rel="noopener">🔗 External link</a> — MDN in a new tab.<br>
+            <a href="mailto:student@example.com">📧 Email link</a> — opens your mail client.<br>
+            <a href="tel:+15550123">📞 Phone link</a> — dials a number on mobile devices.
+          </p>
+        </div>
+      </div>
+
+      <div class="card-block" id="concept">
+        <h2>📝 Source Code</h2>
+        <div class="code-block">
+          <span class="code-caption">The five link patterns</span>
+          <pre>&lt;a href="../index.html"&gt;Internal link&lt;/a&gt;
+&lt;a href="#top"&gt;Anchor within page&lt;/a&gt;
+&lt;a href="https://example.com" target="_blank" rel="noopener"&gt;External link&lt;/a&gt;
+&lt;a href="mailto:you@mail.com"&gt;Email me&lt;/a&gt;
+&lt;a href="tel:+15550123"&gt;Call us&lt;/a&gt;</pre>
+        </div>
+        <div class="tip-box">
+          <strong>⚠️ Note:</strong> Adding <code class="inline">rel="noopener"</code> to every
+          <code class="inline">target="_blank"</code> link stops the new page from accessing
+          <code class="inline">window.opener</code> — a common security best practice.
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>💡 The Concept</h2>
+        <p>
+          A link's destination lives in the <code class="inline">href</code> attribute. The value can
+          be a full URL, a relative path, an email address, or even a phone number:
+        </p>
+        <ul>
+          <li><code class="inline">href="https://example.com"</code> — absolute URL to another site.</li>
+          <li><code class="inline">href="page2.html"</code> — relative path within your site.</li>
+          <li><code class="inline">href="#section"</code> — jump to an element with that id.</li>
+          <li><code class="inline">href="mailto:you@mail.com"</code> — opens the email client.</li>
+          <li><code class="inline">href="tel:+15550123"</code> — dials a number on mobile.</li>
+        </ul>
+        <p>
+          The <code class="inline">target="_blank"</code> attribute opens the link in a new tab.
+          Always pair it with <code class="inline">rel="noopener"</code> for security.
+        </p>
+      </div>
+
+      <div class="card-block">
+        <h2>✅ Key Takeaways</h2>
+        <div class="keypoints">
+          <h3>Remember</h3>
+          <ul>
+            <li>Links are made with the <code class="inline">a</code> element and an <code class="inline">href</code> attribute.</li>
+            <li><code class="inline">href</code> can be absolute, relative, an anchor, <code class="inline">mailto:</code> or <code class="inline">tel:</code>.</li>
+            <li><code class="inline">target="_blank"</code> opens a new tab — pair it with <code class="inline">rel="noopener"</code>.</li>
+            <li>Links work on text and images alike.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pager">
+        <a href="03-paragraphs-text.html">
+          <span class="pager-label">← Previous</span>
+          <span class="pager-title">Paragraphs &amp; Text Formatting</span>
+        </a>
+        <a href="05-images.html" class="next">
+          <span class="pager-label">Next Lesson →</span>
+          <span class="pager-title">Images &amp; Alt Text</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&lt;/&gt; HTML Learning Hub — Lesson 04 of 20 · <span class="lesson-status" id="lesson-status">Not completed yet</span></span>
+      <span><a href="../index.html">Back to home</a></span>
+    </div>
+  </footer>
+
+
+  <script src="../js/app.js" defer></script>
+</body>
+</html>
+

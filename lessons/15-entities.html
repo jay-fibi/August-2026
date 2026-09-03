@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lesson 15: Learn about HTML entities and special characters - named and numeric entities.">
+  <title>Lesson 15: Entities &amp; Special Characters | HTML Learning Hub</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container">
+      <a href="../index.html" class="brand">
+        <span class="logo">&lt;/&gt;</span>
+        HTML Learning Hub
+      </a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#lessons">Lessons</a>
+      </nav>
+        <div id="auth-area"></div>
+      </div>
+  </header>
+
+  <section class="lesson-header" data-lesson="15">
+    <div class="container">
+      <div class="lesson-breadcrumb"><a href="../index.html">Home</a> / Lesson 15</div>
+      <h1>Entities &amp; Special Characters</h1>
+      <p class="lesson-subtitle">
+        Some characters are reserved by HTML — like <code class="inline">&lt;</code> and
+        <code class="inline">&gt;</code> — while others are awkward to type. Entities solve both.
+      </p>
+      <div class="meta-row">
+        <span class="meta-chip">Lesson 15</span>
+        <span class="meta-chip">Beginner</span>
+        <button type="button" id="toggle-complete" class="btn btn-complete">Mark as Complete</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="lesson-body">
+    <div class="container">
+
+      <div class="card-block">
+        <h2>💡 The Concept</h2>
+        <p>
+          An entity always starts with <code class="inline">&amp;</code> and ends with
+          <code class="inline">;</code>. There are two forms:
+        </p>
+        <ul>
+          <li>
+            <strong>Named entities</strong> — readable, e.g. <code class="inline">&amp;copy;</code>.
+          </li>
+          <li>
+            <strong>Numeric entities</strong> — Unicode code points, e.g.
+            <code class="inline">&amp;#169;</code> (same © symbol).
+          </li>
+        </ul>
+        <p>Why do we need them?</p>
+        <ul>
+          <li>
+            <code class="inline">&lt;</code> and <code class="inline">&gt;</code> would be parsed as
+            tag delimiters — writing them literally would break the page.
+          </li>
+          <li>
+            A <code class="inline">&amp;</code> could be read as the start of an entity.
+          </li>
+          <li>
+            Spaces you want to preserve need <code class="inline">&amp;nbsp;</code> (non-breaking space).
+          </li>
+        </ul>
+      </div>
+
+      <div class="card-block">
+        <h2>🖥️ Live Demo</h2>
+        <p>A reference table of common entities rendered in the browser:</p>
+        <div class="demo-box">
+          <div class="demo-label">▸ Live Example — Entities in Action</div>
+          <table class="lesson-table">
+            <thead>
+              <tr><th>Entity Code</th><th>Rendered Result</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code class="inline">&amp;amp;</code></td><td>&amp;</td><td>Ampersand</td></tr>
+              <tr><td><code class="inline">&amp;lt;</code></td><td>&lt;</td><td>Less-than</td></tr>
+              <tr><td><code class="inline">&amp;gt;</code></td><td>&gt;</td><td>Greater-than</td></tr>
+              <tr><td><code class="inline">&amp;copy;</code></td><td>&copy;</td><td>Copyright</td></tr>
+              <tr><td><code class="inline">&amp;reg;</code></td><td>&reg;</td><td>Registered trademark</td></tr>
+              <tr><td><code class="inline">&amp;euro;</code></td><td>&euro;</td><td>Euro currency</td></tr>
+              <tr><td><code class="inline">&amp;nbsp;</code></td><td>a&nbsp;b</td><td>Non-breaking space</td></tr>
+              <tr><td><code class="inline">&amp;#169;</code></td><td>&#169;</td><td>Copyright (numeric form)</td></tr>
+              <tr><td><code class="inline">&amp;hearts;</code></td><td>&hearts;</td><td>Heart symbol</td></tr>
+            </tbody>
+          </table>
+          <p class="demo-note">To display a literal &amp;amp; you must write it as &amp;amp;amp;.</p>
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>📝 Source Code</h2>
+        <div class="code-block">
+          <span class="code-caption">Using entities in HTML</span>
+          <pre>&lt;p&gt;5 &amp;lt; 10 is true.&lt;/p&gt;        →  5 &lt; 10 is true.
+&lt;p&gt;Copyright &amp;copy; 2026.&lt;/p&gt;  →  Copyright © 2026.
+&lt;p&gt;Cost: &amp;euro;5 &amp;amp; up.&lt;/p&gt;  →  Cost: €5 &amp; up.
+&lt;p&gt;Keep &amp;nbsp;words together.&lt;/p&gt;</pre>
+        </div>
+        <div class="tip-box">
+          <strong>💡 Tip:</strong> In HTML you can often type © and € directly thanks to UTF-8 —
+          but the reserved characters (<code class="inline">&lt;</code>, <code class="inline">&gt;</code>,
+          <code class="inline">&amp;</code>) should always be escaped with entities.
+        </div>
+      </div>
+
+
+      <div class="card-block">
+        <h2>✅ Key Takeaways</h2>
+        <div class="keypoints">
+          <h3>Remember</h3>
+          <ul>
+            <li>Entities start with <code class="inline">&amp;</code> and end with <code class="inline">;</code>.</li>
+            <li>Always escape <code class="inline">&lt;</code>, <code class="inline">&gt;</code> and <code class="inline">&amp;</code> in content.</li>
+            <li>Named (<code class="inline">&amp;copy;</code>) and numeric (<code class="inline">&amp;#169;</code>) forms both work.</li>
+            <li>Use <code class="inline">&amp;nbsp;</code> to keep words or numbers together.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pager">
+        <a href="14-meta-tags.html">
+          <span class="pager-label">← Previous</span>
+          <span class="pager-title">Meta Tags &amp; SEO</span>
+        </a>
+        <a href="16-comments.html" class="next">
+          <span class="pager-label">Next Lesson →</span>
+          <span class="pager-title">Comments &amp; Best Practices</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&lt;/&gt; HTML Learning Hub — Lesson 15 of 20 · <span class="lesson-status" id="lesson-status">Not completed yet</span></span>
+      <span><a href="../index.html">Back to home</a></span>
+    </div>
+  </footer>
+
+
+  <script src="../js/app.js" defer></script>
+</body>
+</html>
+

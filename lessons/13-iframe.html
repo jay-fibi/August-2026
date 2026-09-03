@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lesson 13: Learn about HTML iframes - embedding pages, srcdoc, sandbox and lazy loading.">
+  <title>Lesson 13: iframes &amp; Embedding | HTML Learning Hub</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container">
+      <a href="../index.html" class="brand">
+        <span class="logo">&lt;/&gt;</span>
+        HTML Learning Hub
+      </a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#lessons">Lessons</a>
+      </nav>
+        <div id="auth-area"></div>
+      </div>
+  </header>
+
+  <section class="lesson-header" data-lesson="13">
+    <div class="container">
+      <div class="lesson-breadcrumb"><a href="../index.html">Home</a> / Lesson 13</div>
+      <h1>iframes &amp; Embedding</h1>
+      <p class="lesson-subtitle">
+        An <code class="inline">iframe</code> embeds another HTML document inside the current page —
+        the technique behind embedded maps, videos and widgets.
+      </p>
+      <div class="meta-row">
+        <span class="meta-chip">Lesson 13</span>
+        <span class="meta-chip">Intermediate</span>
+        <button type="button" id="toggle-complete" class="btn btn-complete">Mark as Complete</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="lesson-body">
+    <div class="container">
+
+      <div class="card-block">
+        <h2>💡 The Concept</h2>
+        <ul>
+          <li>
+            <code class="inline">src</code> — the URL of the page to embed.
+          </li>
+          <li>
+            <code class="inline">srcdoc</code> — embed inline HTML directly, no separate file needed
+            (perfect for sandboxed demos like the one below).
+          </li>
+          <li>
+            <code class="inline">width</code> / <code class="inline">height</code> — frame size;
+            <code class="inline">title</code> — a label for screen readers (required for accessibility).
+          </li>
+          <li>
+            <code class="inline">loading="lazy"</code> — defer off-screen frames.
+          </li>
+          <li>
+            <code class="inline">sandbox</code> — restrict what the embedded page can do
+            (scripts, forms, popups...). An empty value allows nothing.
+          </li>
+        </ul>
+        <div class="tip-box">
+          <strong>⚠️ Note:</strong> Many sites (e.g. google.com) send an
+          <code class="inline">X-Frame-Options</code> header that blocks embedding. That's a security
+          feature — and a reason <code class="inline">srcdoc</code> is great for demos.
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>🖥️ Live Demo</h2>
+        <p>A srcdoc iframe (inline HTML) and an iframe pointing at the hub's home page:</p>
+        <div class="demo-box">
+          <div class="demo-label">▸ Live Example — iframes</div>
+          <p style="font-size:0.9rem;"><strong>1. srcdoc iframe</strong> — the frame's entire page is written as the srcdoc attribute:</p>
+          <iframe srcdoc="&lt;p style=&quot;font-family:Arial;padding:12px;&quot;&gt;👋 I am inline HTML inside a &lt;code&gt;srcdoc&lt;/code&gt; iframe. No separate file needed!&lt;/p&gt;"
+                  title="srcdoc iframe demo" width="100%" height="70" style="border:2px solid var(--primary); border-radius:8px;"></iframe>
+          <p style="font-size:0.9rem; margin-top:14px;"><strong>2. src iframe</strong> — embeds the hub's home page (relative src):</p>
+          <iframe src="../index.html" title="Embedded HTML Learning Hub home page" width="100%" height="220"
+                  loading="lazy" style="border:2px solid var(--primary); border-radius:8px;"></iframe>
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>📝 Source Code</h2>
+        <div class="code-block">
+          <span class="code-caption">srcdoc and src iframes</span>
+          <pre>&lt;iframe srcdoc="&lt;p&gt;Hello from inline HTML&lt;/p&gt;"
+        title="Inline demo"&gt;&lt;/iframe&gt;
+
+&lt;iframe src="https://example.com/widget"
+        title="External widget"
+        width="400" height="300"
+        loading="lazy"&gt;&lt;/iframe&gt;</pre>
+        </div>
+        <div class="tip-box">
+          <strong>💡 Tip:</strong> Give every iframe a descriptive
+          <code class="inline">title</code> — screen reader users rely on it to know what the frame is.
+        </div>
+      </div>
+
+
+      <div class="card-block">
+        <h2>✅ Key Takeaways</h2>
+        <div class="keypoints">
+          <h3>Remember</h3>
+          <ul>
+            <li><code class="inline">iframe</code> embeds one HTML document inside another.</li>
+            <li><code class="inline">srcdoc</code> embeds inline HTML without a separate file.</li>
+            <li>Always set a descriptive <code class="inline">title</code> for accessibility.</li>
+            <li>Use <code class="inline">sandbox</code> to restrict untrusted embedded content.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pager">
+        <a href="12-media.html">
+          <span class="pager-label">← Previous</span>
+          <span class="pager-title">Audio &amp; Video</span>
+        </a>
+        <a href="14-meta-tags.html" class="next">
+          <span class="pager-label">Next Lesson →</span>
+          <span class="pager-title">Meta Tags &amp; SEO</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&lt;/&gt; HTML Learning Hub — Lesson 13 of 20 · <span class="lesson-status" id="lesson-status">Not completed yet</span></span>
+      <span><a href="../index.html">Back to home</a></span>
+    </div>
+  </footer>
+
+
+  <script src="../js/app.js" defer></script>
+</body>
+</html>
+

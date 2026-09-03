@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lesson 14: Learn about HTML meta tags for SEO and social sharing - charset, viewport, description, Open Graph.">
+  <meta name="keywords" content="HTML, meta tags, SEO, Open Graph, viewport, charset">
+  <meta name="author" content="HTML Learning Hub">
+  <meta property="og:title" content="Lesson 14: Meta Tags &amp; SEO">
+  <meta property="og:description" content="Learn how meta tags shape search results and social shares.">
+  <meta property="og:type" content="website">
+  <title>Lesson 14: Meta Tags &amp; SEO | HTML Learning Hub</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container">
+      <a href="../index.html" class="brand">
+        <span class="logo">&lt;/&gt;</span>
+        HTML Learning Hub
+      </a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#lessons">Lessons</a>
+      </nav>
+        <div id="auth-area"></div>
+      </div>
+  </header>
+
+  <section class="lesson-header" data-lesson="14">
+    <div class="container">
+      <div class="lesson-breadcrumb"><a href="../index.html">Home</a> / Lesson 14</div>
+      <h1>Meta Tags &amp; SEO</h1>
+      <p class="lesson-subtitle">
+        <code class="inline">meta</code> tags live in the <code class="inline">head</code> and are
+        invisible to visitors — but they shape search results, social previews and mobile rendering.
+      </p>
+      <div class="meta-row">
+        <span class="meta-chip">Lesson 14</span>
+        <span class="meta-chip">Intermediate</span>
+        <button type="button" id="toggle-complete" class="btn btn-complete">Mark as Complete</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="lesson-body">
+    <div class="container">
+
+      <div class="card-block">
+        <h2>💡 The Concept</h2>
+        <ul>
+          <li>
+            <code class="inline">charset</code> — declares UTF-8 so emoji and special characters render.
+          </li>
+          <li>
+            <code class="inline">viewport</code> — the magic tag that makes pages usable on phones;
+            it sets the width to the device width.
+          </li>
+          <li>
+            <code class="inline">description</code> — the blurb under your site name in Google results.
+          </li>
+          <li>
+            <code class="inline">author</code>, <code class="inline">keywords</code> — informative, minor
+            SEO weight.
+          </li>
+          <li>
+            <code class="inline">robots</code> — instruct crawlers (index, noindex, nofollow).
+          </li>
+          <li>
+            <strong>Open Graph</strong> (<code class="inline">og:*</code>) and
+            <strong>Twitter Card</strong> (<code class="inline">twitter:*</code>) — control how your page
+            previews when shared on social media.
+          </li>
+        </ul>
+        <p>
+          This very page uses meta tags — view the page source to see them in action (including the
+          og:title and og:description for social sharing).
+        </p>
+      </div>
+
+      <div class="card-block">
+        <h2>🖥️ Live Demo</h2>
+        <p>Below is a rendered "card" that mimics how a search engine or social feed uses your meta tags:</p>
+        <div class="demo-box">
+          <div class="demo-label">▸ Live Example — Search Result Preview</div>
+          <div style="border:1px solid var(--border); border-radius:8px; padding:16px; background:#fff; max-width:560px; font-family:Arial, sans-serif;">
+            <p style="color:#4b5563; font-size:0.8rem;">html-learning-hub · lessons · lesson-14</p>
+            <p style="color:#1a0dab; font-size:1.15rem; font-weight:600;">Lesson 14: Meta Tags &amp; SEO | HTML Learning Hub</p>
+            <p style="color:#4b5563; font-size:0.9rem;">Learn how meta tags shape search results, social shares and mobile rendering — with real head examples.</p>
+          </div>
+          <p class="demo-note">The blue line above is the &lt;title&gt;; the grey text below it is the meta description.</p>
+        </div>
+      </div>
+
+      <div class="card-block">
+        <h2>📝 Source Code</h2>
+        <div class="code-block">
+          <span class="code-caption">The essential meta tags (all inside &lt;head&gt;)</span>
+          <pre>&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;meta name="description" content="Learn HTML the hands-on way."&gt;
+&lt;meta name="author" content="HTML Learning Hub"&gt;
+&lt;meta name="robots" content="index, follow"&gt;
+
+&lt;title&gt;Page Title Shown in Search Results&lt;/title&gt;
+
+&lt;!-- Social sharing previews --&gt;
+&lt;meta property="og:title" content="HTML Learning Hub"&gt;
+&lt;meta property="og:description" content="20 hands-on HTML lessons."&gt;
+&lt;meta property="og:type" content="website"&gt;
+&lt;meta name="twitter:card" content="summary_large_image"&gt;</pre>
+        </div>
+      </div>
+
+
+      <div class="card-block">
+        <h2>✅ Key Takeaways</h2>
+        <div class="keypoints">
+          <h3>Remember</h3>
+          <ul>
+            <li><code class="inline">meta charset</code> and <code class="inline">meta viewport</code> belong on every page.</li>
+            <li>Write a compelling <code class="inline">description</code> — it's your advert in search results.</li>
+            <li>Open Graph and Twitter Card tags control social media previews.</li>
+            <li>Meta tags live in the <code class="inline">head</code>; they are invisible on the page itself.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pager">
+        <a href="13-iframe.html">
+          <span class="pager-label">← Previous</span>
+          <span class="pager-title">iframes &amp; Embedding</span>
+        </a>
+        <a href="15-entities.html" class="next">
+          <span class="pager-label">Next Lesson →</span>
+          <span class="pager-title">Entities &amp; Special Characters</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&lt;/&gt; HTML Learning Hub — Lesson 14 of 20 · <span class="lesson-status" id="lesson-status">Not completed yet</span></span>
+      <span><a href="../index.html">Back to home</a></span>
+    </div>
+  </footer>
+
+
+  <script src="../js/app.js" defer></script>
+</body>
+</html>
+
