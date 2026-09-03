@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jay Interactive Test Page</title>
+
+  <!-- Jay Task 2 - stylesheet reference -->
+  <link rel="stylesheet" href="jay-styles.css" />
+
+  <!-- Jay Task 1 - script reference (ES module, deferred by default) -->
+  <script type="module" src="jay-interactive.js"></script>
+</head>
+<body class="jay-body">
+  <main class="jay-container">
+    <header class="jay-header">
+      <h1 id="jay-interactive-title">Jay Interactive Test Page</h1>
+      <p class="jay-subtitle">Buttons, inputs, a form and a long scroll area for Cline</p>
+    </header>
+
+    <!-- ============ Jay Step 2 target: clickable button ============ -->
+    <section class="jay-section" id="jay-click-section">
+      <h2 class="jay-section-heading">Click Target</h2>
+      <button type="button" id="jay-action-button" class="jay-button">Jay Click Me</button>
+      <button type="button" id="jay-reset-button" class="jay-button jay-button--ghost">Jay Reset</button>
+      <span id="jay-click-output" class="jay-output" data-jay-clicks="0">Jay clicks: 0</span>
+      <p id="jay-click-log" class="jay-status">Jay button never clicked</p>
+    </section>
+
+    <!-- ====== Jay Step 3 + 4 targets: form fields and submission ====== -->
+    <section class="jay-section" id="jay-form-section">
+      <h2 class="jay-section-heading">Jay Signup Form</h2>
+
+      <form id="jay-signup-form" class="jay-form" novalidate>
+        <div class="jay-field">
+          <label class="jay-label" for="jay-name-input">Jay Full Name</label>
+          <input
+            class="jay-input"
+            id="jay-name-input"
+            name="jayName"
+            type="text"
+            placeholder="Jay Gohil"
+            autocomplete="off"
+            required
+          />
+        </div>
+
+        <div class="jay-field">
+          <label class="jay-label" for="jay-email-input">Jay Email</label>
+          <input
+            class="jay-input"
+            id="jay-email-input"
+            name="jayEmail"
+            type="email"
+            placeholder="jay@example.com"
+            autocomplete="off"
+            required
+          />
+        </div>
+
+        <div class="jay-field">
+          <label class="jay-label" for="jay-role-select">Jay Role</label>
+          <select class="jay-input" id="jay-role-select" name="jayRole">
+            <option value="">Jay pick a role</option>
+            <option value="jay-engineer">Jay Engineer</option>
+            <option value="jay-tester">Jay Tester</option>
+            <option value="jay-manager">Jay Manager</option>
+          </select>
+        </div>
+
+        <div class="jay-field">
+          <label class="jay-label" for="jay-notes-input">Jay Notes</label>
+          <textarea
+            class="jay-input"
+            id="jay-notes-input"
+            name="jayNotes"
+            rows="3"
+            placeholder="Jay notes go here"
+          ></textarea>
+        </div>
+
+        <div class="jay-field jay-field--inline">
+          <input class="jay-checkbox" id="jay-terms-checkbox" name="jayTerms" type="checkbox" />
+          <label class="jay-label" for="jay-terms-checkbox">Jay accepts the terms</label>
+        </div>
+
+        <p id="jay-live-echo" class="jay-status">Jay typed nothing yet</p>
+
+        <button type="submit" id="jay-submit-button" class="jay-button">Jay Submit Form</button>
+      </form>
+
+      <div id="jay-form-result" class="jay-result" hidden>
+        <h3 class="jay-section-heading">Jay Submission Result</h3>
+        <p id="jay-form-message" class="jay-status"></p>
+        <dl id="jay-form-values" class="jay-values"></dl>
+      </div>
+
+      <p id="jay-form-error" class="jay-status jay-status--error" hidden></p>
+    </section>
+
+    <!-- ============ Jay Step 5 target: long scrollable area ============ -->
+    <section class="jay-section" id="jay-scroll-section">
+      <h2 class="jay-section-heading">Jay Scroll Area</h2>
+      <p id="jay-scroll-readout" class="jay-status">Jay scrollY: 0 (depth 0%)</p>
+      <ol id="jay-scroll-list" class="jay-scroll-list">
+        <li class="jay-scroll-item">Jay scroll row 01</li>
+        <li class="jay-scroll-item">Jay scroll row 02</li>
+        <li class="jay-scroll-item">Jay scroll row 03</li>
+        <li class="jay-scroll-item">Jay scroll row 04</li>
+        <li class="jay-scroll-item">Jay scroll row 05</li>
+        <li class="jay-scroll-item">Jay scroll row 06</li>
+        <li class="jay-scroll-item">Jay scroll row 07</li>
+        <li class="jay-scroll-item">Jay scroll row 08</li>
+        <li class="jay-scroll-item">Jay scroll row 09</li>
+        <li class="jay-scroll-item">Jay scroll row 10</li>
+        <li class="jay-scroll-item">Jay scroll row 11</li>
+        <li class="jay-scroll-item">Jay scroll row 12</li>
+        <li class="jay-scroll-item">Jay scroll row 13</li>
+        <li class="jay-scroll-item">Jay scroll row 14</li>
+        <li class="jay-scroll-item">Jay scroll row 15</li>
+        <li class="jay-scroll-item">Jay scroll row 16</li>
+        <li class="jay-scroll-item">Jay scroll row 17</li>
+        <li class="jay-scroll-item">Jay scroll row 18</li>
+        <li class="jay-scroll-item">Jay scroll row 19</li>
+        <li class="jay-scroll-item">Jay scroll row 20</li>
+        <li class="jay-scroll-item">Jay scroll row 21</li>
+        <li class="jay-scroll-item">Jay scroll row 22</li>
+        <li class="jay-scroll-item">Jay scroll row 23</li>
+        <li class="jay-scroll-item">Jay scroll row 24</li>
+        <li class="jay-scroll-item">Jay scroll row 25</li>
+        <li class="jay-scroll-item">Jay scroll row 26</li>
+        <li class="jay-scroll-item">Jay scroll row 27</li>
+        <li class="jay-scroll-item">Jay scroll row 28</li>
+        <li class="jay-scroll-item">Jay scroll row 29</li>
+        <li class="jay-scroll-item">Jay scroll row 30</li>
+      </ol>
+      <p id="jay-scroll-sentinel" class="jay-sentinel">Jay reached the bottom sentinel</p>
+    </section>
+
+    <footer class="jay-footer">
+      <small>Jay Gohil &mdash; jay-web interactive demo</small>
+    </footer>
+  </main>
+</body>
+</html>

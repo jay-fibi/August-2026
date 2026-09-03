@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jay Web Demo</title>
+
+  <!-- Jay Task 2 - stylesheet reference -->
+  <link rel="stylesheet" href="jay-styles.css" />
+
+  <!-- Jay Task 1 - script reference (ES module, deferred by default) -->
+  <script type="module" src="jay-app.js"></script>
+</head>
+<body class="jay-body">
+  <main class="jay-container">
+    <header class="jay-header">
+      <h1 id="jay-app-title">Jay Web Demo</h1>
+      <p class="jay-subtitle">HTML + CSS + JS + JSON wired together by Cline</p>
+    </header>
+
+    <section class="jay-section">
+      <h2 class="jay-section-heading">Features from jay-config.json</h2>
+      <ul id="jay-feature-list">
+        <li class="jay-feature-item">Jay loading features...</li>
+      </ul>
+    </section>
+
+    <section class="jay-section">
+      <h2 class="jay-section-heading">Interaction</h2>
+      <button type="button" id="jay-counter-button" class="jay-button">Jay Click Me</button>
+      <span id="jay-counter-output" class="jay-output">Jay clicks: 0</span>
+    </section>
+
+    <section class="jay-section">
+      <h2 class="jay-section-heading">Status</h2>
+      <p id="jay-status" class="jay-status">Jay initialising...</p>
+    </section>
+
+    <footer class="jay-footer">
+      <small>Jay Gohil &mdash; jay-web demo</small>
+    </footer>
+  </main>
+</body>
+</html>

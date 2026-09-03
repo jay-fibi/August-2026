@@ -1,0 +1,44 @@
+{
+  "appName": "jay web demo",
+  "version": "1.0.0",
+  "author": "Jay Gohil",
+  "createdOn": "2026-09-03",
+  "settings": {
+    "theme": "dark",
+    "locale": "en-IN",
+    "debug": false,
+    "maxFeatureNameLength": 60
+  },
+  "features": [
+    {
+      "id": 1,
+      "name": "Jay JavaScript Module",
+      "description": "Basic ES module that loads configuration and renders it to the DOM.",
+      "enabled": true
+    },
+    {
+      "id": 2,
+      "name": "Jay CSS Styling",
+      "description": "Custom-property based dark theme with responsive breakpoints.",
+      "enabled": true
+    },
+    {
+      "id": 3,
+      "name": "Jay HTML Shell",
+      "description": "Semantic markup that references both the stylesheet and the script.",
+      "enabled": true
+    },
+    {
+      "id": 4,
+      "name": "Jay JSON Config",
+      "description": "Single source of truth for app metadata, settings and features.",
+      "enabled": true
+    },
+    {
+      "id": 5,
+      "name": "Jay Nested Utilities",
+      "description": "String helper module stored inside a nested assets directory structure.",
+      "enabled": true
+    }
+  ]
+}
